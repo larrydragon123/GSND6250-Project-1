@@ -12,11 +12,12 @@ public class Collectable : MonoBehaviour
     public GameObject player;
     public GameObject collectable;
 
+    public BuildStairs buildStairs;
+
     public bool isCollected = false;
 
     void Start()
     {
-
     }
 
     void Update()
