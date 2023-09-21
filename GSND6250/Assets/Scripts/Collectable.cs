@@ -16,6 +16,8 @@ public class Collectable : MonoBehaviour
 
     public bool isCollected = false;
 
+    public GameObject instructionPanel;
+    public GameObject pressE;
     void Start()
     {
     }
@@ -24,13 +26,19 @@ public class Collectable : MonoBehaviour
     {
         if (Vector3.Distance(player.transform.position, collectable.transform.position) < radius)
         {
-            Debug.Log("Player is nearby");
+            // Debug.Log("Player is nearby");
+            instructionPanel.SetActive(true);
+            pressE.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
                 isCollected = true;
                 Destroy(collectable);
-                // Debug.Log("Collected");
+                instructionPanel.SetActive(false);
+                pressE.SetActive(false);
             }
+        }else{
+            instructionPanel.SetActive(false);
+            pressE.SetActive(false);
         }
     }
 

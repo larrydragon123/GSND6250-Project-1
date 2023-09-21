@@ -11,6 +11,9 @@ public class BuildStairs : MonoBehaviour
     public Collectable collectable;
     public GameObject player;
     private bool playerIsNearby = false;
+
+    public GameObject instructionPanel;
+    public GameObject pressQ;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,13 +31,15 @@ public class BuildStairs : MonoBehaviour
             playerGotBuildItem = true;
         }
 
-        if(playerGotBuildItem == true)
+        if(playerGotBuildItem == true && playerIsNearby == true)
             {
                 if (Input.GetKeyDown(KeyCode.Q))
                 {
                     playerBuiltStares = true;
                     placeHolderStairs.SetActive(true);
                     // Debug.Log("Collected");
+                    instructionPanel.SetActive(false);
+                    pressQ.SetActive(false);
                 }
             }
     }
@@ -44,6 +49,8 @@ public class BuildStairs : MonoBehaviour
         if(other.gameObject == player)
         {
             playerIsNearby = true;
+            instructionPanel.SetActive(true);
+            pressQ.SetActive(true);
         }
     }
 
@@ -52,6 +59,8 @@ public class BuildStairs : MonoBehaviour
         if(other.gameObject == player)
         {
             playerIsNearby = false;
+            instructionPanel.SetActive(false);
+            pressQ.SetActive(false);
         }
     }
 
