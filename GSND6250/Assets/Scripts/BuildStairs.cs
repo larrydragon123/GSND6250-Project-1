@@ -10,6 +10,7 @@ public class BuildStairs : MonoBehaviour
     [SerializeField] GameObject placeHolderStairs;
     public Collectable collectable;
     public GameObject player;
+    private bool playerIsNearby = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,15 +27,8 @@ public class BuildStairs : MonoBehaviour
             //Debug.Log("It is wroking");
             playerGotBuildItem = true;
         }
-        
-    }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if(other.gameObject == player)
-        {
-            //Debug.Log("It is wroking");
-            if(playerGotBuildItem == true)
+        if(playerGotBuildItem == true)
             {
                 if (Input.GetKeyDown(KeyCode.Q))
                 {
@@ -43,6 +37,21 @@ public class BuildStairs : MonoBehaviour
                     // Debug.Log("Collected");
                 }
             }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject == player)
+        {
+            playerIsNearby = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject == player)
+        {
+            playerIsNearby = false;
         }
     }
 
