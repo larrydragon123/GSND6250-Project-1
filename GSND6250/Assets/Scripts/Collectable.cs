@@ -23,7 +23,7 @@ public class Collectable : MonoBehaviour
     {
         if (Vector3.Distance(player.transform.position, collectable.transform.position) < radius)
         {
-            // Debug.Log("Player is nearby");
+            Debug.Log("Player is nearby");
             if (Input.GetKeyDown(KeyCode.E))
             {
                 isCollected = true;
