@@ -42,14 +42,6 @@ public class BuildStairs : MonoBehaviour
                     pressQ.SetActive(false);
                 }
             }
-
-        if(playerIsNearby){
-            instructionPanel.SetActive(true);
-            pressQ.SetActive(true);
-        }else{
-            instructionPanel.SetActive(false);
-            pressQ.SetActive(false);
-        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -58,6 +50,8 @@ public class BuildStairs : MonoBehaviour
         {
             Debug.Log("Player is nearby");
             playerIsNearby = true;
+            instructionPanel.SetActive(true);
+            pressQ.SetActive(true);
             
         }
     }
@@ -67,6 +61,8 @@ public class BuildStairs : MonoBehaviour
         if(other.gameObject == player)
         {
             playerIsNearby = false;
+            instructionPanel.SetActive(false);
+            pressQ.SetActive(false);
             
         }
     }
