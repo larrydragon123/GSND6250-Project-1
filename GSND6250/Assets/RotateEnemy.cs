@@ -6,8 +6,8 @@ public class RotateEnemy : MonoBehaviour
 {
 
     public bool baseRotation = true;
-    public int baseRotationValue = -45;
-    public int otherRotationValue = 135;
+    public int baseRotationValue = 0;
+    public int otherRotationValue = 90;
     
     
     // Start is called before the first frame update
@@ -19,31 +19,16 @@ public class RotateEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+       //rotate the enemy between 0 and 90 degrees
+         if (baseRotation)
+         {
+              transform.rotation = Quaternion.Euler(0, baseRotationValue + Mathf.PingPong(Time.time * 90, otherRotationValue), 0);
+         }
+         else
+         {
+              transform.rotation = Quaternion.Euler(0, otherRotationValue + Mathf.PingPong(Time.time * 90, baseRotationValue), 0);
+         }
         
 
-        if (baseRotation == true && transform.rotation.y < otherRotationValue)
-        {
-           transform.Rotate(0, 0.5f, 0);
-            print(transform.rotation);
-            //transform.eulerAngles = new Vector3(0, 1, 0);
-            if (transform.rotation.y == otherRotationValue)
-            {
-                print("REVERSE ROATION");
-                baseRotation = false;
-            }
-        }
-
-        
-
-        if (baseRotation == false && transform.rotation.y > baseRotationValue)
-        {
-            transform.Rotate(0, -0.5f, 0);
-            //transform.eulerAngles = new Vector3(0, -1, 0);
-            if (transform.rotation.y == baseRotationValue)
-            {
-                baseRotation = true;
-            }
-        }
     }
 }
