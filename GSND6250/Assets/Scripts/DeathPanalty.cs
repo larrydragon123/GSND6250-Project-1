@@ -13,9 +13,9 @@ public class DeathPanalty : MonoBehaviour
     }
 
     //when touched the player restarts the level
-    void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject == player)
+        if (collision.gameObject == player)
         {
             //load this scene
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
