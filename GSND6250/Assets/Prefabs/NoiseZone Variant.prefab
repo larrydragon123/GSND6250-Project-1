@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3881156241829066635, guid: 5c0e6e5cd59a4864f80dda3522e30d42, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3881156241854391102, guid: 5c0e6e5cd59a4864f80dda3522e30d42, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -53,7 +57,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3881156241854391103, guid: 5c0e6e5cd59a4864f80dda3522e30d42, type: 3}
       propertyPath: m_Name
-      value: NoiseZone
+      value: NoiseZone Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5900330078448806375, guid: 5c0e6e5cd59a4864f80dda3522e30d42, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1625b54052e533c44bd137173a9f3303, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c0e6e5cd59a4864f80dda3522e30d42, type: 3}
