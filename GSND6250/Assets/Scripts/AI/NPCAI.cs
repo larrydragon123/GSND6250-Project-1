@@ -2,34 +2,43 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class NPCAI : MonoBehaviour
 {
-    //NPC with walk to waypoints until the last one, one each waypoints npc will lookaround for players,if see player for 3 seconds game over
+    NavMeshAgent agent;
     public Transform[] waypoints;
-    public int currentWaypoint = 0;
-    public float speed = 1.0f;
+    public int waypointIndex = 0;
+    Vector3 target;
+    
     
     public void Start()
     {
-        
+        agent = GetComponent<NavMeshAgent>();
+        UpdateDestination();
     }
 
-
-
-    public void MoveToNextPoint()
+    void Update()
     {
-        if(currentWaypoint < waypoints.Length)
+        if (Vector3.Distance(transform.position, target) < 1f)
         {
-            transform.position = Vector2.MoveTowards(transform.position, waypoints[currentWaypoint].position, speed * Time.deltaTime);
-            if (transform.position == waypoints[currentWaypoint].position)
-            {
-                currentWaypoint++;
-            }
+            IterateWaypointIndex();
+            UpdateDestination();
         }
-        else
+    }
+
+    private void UpdateDestination()
+    {
+        target = waypoints[waypointIndex].position;
+        agent.SetDestination(target);
+    }
+
+    void IterateWaypointIndex()
+    {
+        waypointIndex++;
+        if (waypointIndex >= waypoints.Length)
         {
-            currentWaypoint = 0;
+            waypointIndex = 0;
         }
     }
 }
