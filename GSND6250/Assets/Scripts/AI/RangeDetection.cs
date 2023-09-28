@@ -9,10 +9,13 @@ public class RangeDetection : MonoBehaviour
     private GameObject player;
 
     public float range = 20f;
+    public float tooFarRange = 25f;
+    public GameObject tooFar;
 
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
+        tooFar.SetActive(false);
     }
 
     private void Update()
@@ -25,6 +28,14 @@ public class RangeDetection : MonoBehaviour
             Debug.Log("Player is not in range");
             //restart the game
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        if(Vector3.Distance(transform.position, player.transform.position) > tooFarRange)
+        {
+            Debug.Log("Player is too far");
+            tooFar.SetActive(true);
+        }else{
+            tooFar.SetActive(false);
         }
     }
 
