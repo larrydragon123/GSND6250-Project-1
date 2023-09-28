@@ -89,14 +89,15 @@ public class VisionDetection : MonoBehaviour
             IsPlayerInSight = true;
         }
     }
+    
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            IsPlayerInSight = false;
-        }
-    }
+    // private void OnTriggerExit(Collider other)
+    // {
+    //     if (other.gameObject.tag == "Player")
+    //     {
+    //         IsPlayerInSight = false;
+    //     }
+    // }
 
 
 }
