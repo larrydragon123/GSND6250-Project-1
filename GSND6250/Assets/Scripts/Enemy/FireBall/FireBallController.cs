@@ -7,6 +7,7 @@ using UnityEngine;
 public class FireBallController : MonoBehaviour
 {
     public float attackFrequency = 2f;
+    public float overheadAttackHeight = 5f;
     public Transform firePoint;
 
     public GameObject fireBallPrefab;
@@ -33,7 +34,7 @@ public class FireBallController : MonoBehaviour
         }
         else
         {
-            Instantiate(fireBallPrefab, player.transform.position + new Vector3(0, 5, 0), firePoint.rotation);
+            Instantiate(fireBallPrefab, player.transform.position + new Vector3(0, overheadAttackHeight, 0), firePoint.rotation);
         }
         
     }
