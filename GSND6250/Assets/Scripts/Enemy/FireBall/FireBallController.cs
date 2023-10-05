@@ -18,6 +18,7 @@ public class FireBallController : MonoBehaviour
     public Transform firePoint;
 
     public GameObject fireBallPrefab;
+    private bool isAbove = false;
 
     public GameObject player;
     // Start is called before the first frame update
@@ -36,14 +37,15 @@ public class FireBallController : MonoBehaviour
     {
         this.GetComponent<Transform>().LookAt(player.transform);
 
-        //randomly shoot from either the firepoint or aboveplayer
-        if (UnityEngine.Random.Range(0, 2) == 0)
+        if (!isAbove)
         {
             Instantiate(fireBallPrefab, firePoint.position, firePoint.rotation);
+            isAbove = true;
         }
         else
         {
             Instantiate(fireBallPrefab, player.transform.position + new Vector3(0, overheadAttackHeight, 0), firePoint.rotation);
+            isAbove = false;
         }
         
     }
