@@ -8,6 +8,9 @@ public class FireBallController : MonoBehaviour
 {
     public float attackFrequency = 2f;
     public float overheadAttackHeight = 5f;
+
+    public int lightableRequired = 4;
+    public int lightableCount = 0;
     public Transform firePoint;
 
     public GameObject fireBallPrefab;
@@ -16,7 +19,7 @@ public class FireBallController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        lightableCount = 0;
         player = GameObject.FindGameObjectWithTag("Player");
         
         InvokeRepeating("Shoot", 0f, attackFrequency);
@@ -42,6 +45,9 @@ public class FireBallController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (lightableCount >= lightableRequired)
+        {
+            Debug.Log("All Lit:" + lightableCount);
+        }
     }
 }
