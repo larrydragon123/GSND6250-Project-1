@@ -5,30 +5,43 @@ using UnityEngine;
 public class ShadowWin : MonoBehaviour
 {
 
-    public string tag;
+    // public string tag;
     public FireBallController fireBallController;
-    public bool allLit;
+
+    public GameObject center;
+
+    private bool isTriggered = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        allLit = fireBallController.allLit;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        allLit = fireBallController.allLit;
+        if(isTriggered)
+        {
+            moveTheCenter();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (allLit)
+        if (fireBallController.allLit)
         {
-            if(other.gameObject.tag == tag)
+            if(other.gameObject.tag == "Player")
             {
-                print("WIN");
+                isTriggered = true;
+                fireBallController.setIsTrigger();
+                
             }
         }
+    }
+
+    private void moveTheCenter()
+    {
+        center.transform.position = Vector3.Lerp(center.transform.position, new Vector3(center.transform.position.x, center.transform.position.y - 3, center.transform.position.z), 0.01f);
     }
 }

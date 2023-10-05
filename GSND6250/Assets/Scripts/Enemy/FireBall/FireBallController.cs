@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FireBallController : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class FireBallController : MonoBehaviour
     public AudioClip frontSpeech;
     public AudioClip straightFireBall;
     public AudioClip aboveFireBall;
+    public AudioClip winSpeech;
 
     private bool isAbove = false;
 
@@ -78,19 +80,37 @@ public class FireBallController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (lightableCount >= lightableRequired)
+        if (lightableCount >= lightableRequired && !allLit)
         {
             Debug.Log("All Lit:" + lightableCount);
 
             allLit = true;
             //stop repeating
             CancelInvoke();
+            //play win speech
+            audioSource.PlayOneShot(winSpeech);
 
             Debug.Log("All Lit:" + allLit);
 
             light1.enabled = false;
             light2.intensity = 10;
             light3.intensity = 10;
+        }
+    }
+
+    public void setIsTrigger(){
+        gameObject.GetComponent<CapsuleCollider>().isTrigger = true;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Destroy(this.gameObject);
+            
+
+            Debug.Log("Player wins");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

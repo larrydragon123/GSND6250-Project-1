@@ -1298,7 +1298,7 @@ PrefabInstance:
       objectReference: {fileID: 1949840926}
     - target: {fileID: 7428293268727662882, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: whatIsGround.m_Bits
-      value: 1537
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7428293268727662884, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: m_Enabled
@@ -1334,19 +1334,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7428293269442629740, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.05960481
+      value: 0.05960483
       objectReference: {fileID: 0}
     - target: {fileID: 7428293269442629740, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0015019141
+      value: 0.0015019096
       objectReference: {fileID: 0}
     - target: {fileID: 7428293269442629740, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9979042
+      value: 0.9979041
       objectReference: {fileID: 0}
     - target: {fileID: 7428293269442629740, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.025147125
+      value: -0.025147019
       objectReference: {fileID: 0}
     - target: {fileID: 7428293269538852109, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1374,19 +1374,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7428293269903013847, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.059607554
+      value: 0.05960809
       objectReference: {fileID: 0}
     - target: {fileID: 7428293269903013847, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0013290016
+      value: -0.0013290538
       objectReference: {fileID: 0}
     - target: {fileID: 7428293269903013847, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.99797297
+      value: 0.997973
       objectReference: {fileID: 0}
     - target: {fileID: 7428293269903013847, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.022250654
+      value: 0.022250641
       objectReference: {fileID: 0}
     - target: {fileID: 7428293270177403314, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1434,19 +1434,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7428293270291380184, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.05946991
+      value: 0.05946985
       objectReference: {fileID: 0}
     - target: {fileID: 7428293270291380184, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0042712647
+      value: 0.004271258
       objectReference: {fileID: 0}
     - target: {fileID: 7428293270291380184, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9956569
+      value: 0.99565685
       objectReference: {fileID: 0}
     - target: {fileID: 7428293270291380184, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.07150214
+      value: -0.07150194
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
@@ -2721,9 +2721,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3ebdb8720dfd2e41800e8b32b65c18a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tag: Player
   fireBallController: {fileID: 720907682}
-  allLit: 0
+  center: {fileID: 973168014}
 --- !u!1001 &514105422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3843,7 +3842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c88f8f4d1b065ba40ae2760af2073955, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.06
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c88f8f4d1b065ba40ae2760af2073955, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8594,9 +8593,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3ebdb8720dfd2e41800e8b32b65c18a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tag: BOSS
   fireBallController: {fileID: 720907682}
-  allLit: 0
+  center: {fileID: 973168014}
 --- !u!1 &1901962202
 GameObject:
   m_ObjectHideFlags: 0
@@ -9616,6 +9614,14 @@ PrefabInstance:
       propertyPath: light3
       value: 
       objectReference: {fileID: 1596801488}
+    - target: {fileID: 2999335339025205379, guid: 61fdf7d433f73c943acde4f346f03b31, type: 3}
+      propertyPath: winSpeech
+      value: 
+      objectReference: {fileID: 8300000, guid: d770d4aba051ca14d950d37072e7cecf, type: 3}
+    - target: {fileID: 2999335339025205379, guid: 61fdf7d433f73c943acde4f346f03b31, type: 3}
+      propertyPath: frontSpeech
+      value: 
+      objectReference: {fileID: 8300000, guid: f6bb42c12fac08449bd60026c6f7cc62, type: 3}
     - target: {fileID: 2999335339025205379, guid: 61fdf7d433f73c943acde4f346f03b31, type: 3}
       propertyPath: lightableCount
       value: 0
