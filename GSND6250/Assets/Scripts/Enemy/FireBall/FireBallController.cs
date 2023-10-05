@@ -15,6 +15,7 @@ public class FireBallController : MonoBehaviour
 
     public Light light1;
     public Light light2;
+    public Light light3;
     public Transform firePoint;
 
     public GameObject fireBallPrefab;
@@ -30,6 +31,7 @@ public class FireBallController : MonoBehaviour
         Shoot();
 
         light2.intensity = 0;
+        light3.intensity = 0;
     }
 
     private void Shoot()
@@ -61,6 +63,7 @@ public class FireBallController : MonoBehaviour
 
             light1.enabled = false;
             light2.intensity = 10;
+            light3.intensity = 10;
         }
     }
 }
