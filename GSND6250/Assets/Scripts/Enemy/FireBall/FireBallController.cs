@@ -28,6 +28,8 @@ public class FireBallController : MonoBehaviour
         
         InvokeRepeating("Shoot", 0f, attackFrequency);
         Shoot();
+
+        light2.intensity = 0;
     }
 
     private void Shoot()
@@ -58,7 +60,7 @@ public class FireBallController : MonoBehaviour
             Debug.Log("All Lit:" + allLit);
 
             light1.enabled = false;
-            light2.enabled = true;
+            light2.intensity = 10;
         }
     }
 }
