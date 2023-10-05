@@ -1338,7 +1338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7428293269442629740, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0015019104
+      value: 0.0015019141
       objectReference: {fileID: 0}
     - target: {fileID: 7428293269442629740, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1346,7 +1346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7428293269442629740, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.025147073
+      value: -0.025147125
       objectReference: {fileID: 0}
     - target: {fileID: 7428293269538852109, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1378,7 +1378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7428293269903013847, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0013290021
+      value: -0.0013290016
       objectReference: {fileID: 0}
     - target: {fileID: 7428293269903013847, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1386,7 +1386,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7428293269903013847, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.022250665
+      value: 0.022250654
       objectReference: {fileID: 0}
     - target: {fileID: 7428293270177403314, guid: cb20367569d181148b0af0304b4d6aa5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2623,6 +2623,7 @@ GameObject:
   - component: {fileID: 481286114}
   - component: {fileID: 481286113}
   - component: {fileID: 481286112}
+  - component: {fileID: 481286116}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -2708,6 +2709,21 @@ Transform:
   m_Father: {fileID: 122255273}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &481286116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481286111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ebdb8720dfd2e41800e8b32b65c18a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tag: Player
+  fireBallController: {fileID: 720907682}
+  allLit: 0
 --- !u!1001 &514105422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3204,6 +3220,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -889180119648741084, guid: 0d922f95c74581c4d809542c83d4c9d5, type: 3}
+--- !u!114 &720907682 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2999335339025205379, guid: 61fdf7d433f73c943acde4f346f03b31, type: 3}
+  m_PrefabInstance: {fileID: 2999335339638425132}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aec3f58879688a449ca88b35c397a21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &763276563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8469,6 +8496,7 @@ GameObject:
   - component: {fileID: 1888228441}
   - component: {fileID: 1888228440}
   - component: {fileID: 1888228439}
+  - component: {fileID: 1888228443}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -8554,6 +8582,21 @@ Transform:
   m_Father: {fileID: 122255273}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1888228443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888228438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ebdb8720dfd2e41800e8b32b65c18a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tag: BOSS
+  fireBallController: {fileID: 720907682}
+  allLit: 0
 --- !u!1 &1901962202
 GameObject:
   m_ObjectHideFlags: 0
@@ -9583,6 +9626,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2999335339025205381, guid: 61fdf7d433f73c943acde4f346f03b31, type: 3}
       propertyPath: m_Name
+      value: BOSS
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999335339025205381, guid: 61fdf7d433f73c943acde4f346f03b31, type: 3}
+      propertyPath: m_TagString
       value: BOSS
       objectReference: {fileID: 0}
     - target: {fileID: 2999335339025205382, guid: 61fdf7d433f73c943acde4f346f03b31, type: 3}

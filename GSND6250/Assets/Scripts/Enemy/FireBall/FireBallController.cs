@@ -13,9 +13,12 @@ public class FireBallController : MonoBehaviour
     public int lightableCount = 0;
     public bool allLit = false;
 
+    //All for win state
     public Light light1;
     public Light light2;
     public Light light3;
+
+
     public Transform firePoint;
 
     public GameObject fireBallPrefab;
