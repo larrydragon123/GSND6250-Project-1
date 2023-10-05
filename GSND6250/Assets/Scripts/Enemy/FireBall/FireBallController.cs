@@ -20,34 +20,56 @@ public class FireBallController : MonoBehaviour
 
     public GameObject fireBallPrefab;
 
+    private AudioSource audioSource;
+    public AudioClip frontSpeech;
+    public AudioClip straightFireBall;
+    public AudioClip aboveFireBall;
+
+    private bool isAbove = false;
+
     public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         lightableCount = 0;
         player = GameObject.FindGameObjectWithTag("Player");
-        
-        InvokeRepeating("Shoot", 0f, attackFrequency);
-        Shoot();
+        //after play the audio, shoot the fireball
+
+        StartCoroutine(ShootFireBall());
 
         light2.intensity = 0;
         light3.intensity = 0;
     }
+
+    IEnumerator ShootFireBall()
+    {
+        audioSource.PlayOneShot(frontSpeech);
+        yield return new WaitForSeconds(frontSpeech.length);
+        InvokeRepeating("Shoot", 0f, attackFrequency);
+    }
+
+
+
 
     private void Shoot()
     {
         this.GetComponent<Transform>().LookAt(player.transform);
 
         //randomly shoot from either the firepoint or aboveplayer
-        if (UnityEngine.Random.Range(0, 2) == 0)
+        if (!isAbove)
         {
             Instantiate(fireBallPrefab, firePoint.position, firePoint.rotation);
+            audioSource.PlayOneShot(straightFireBall);
+            isAbove = true;
         }
         else
         {
             Instantiate(fireBallPrefab, player.transform.position + new Vector3(0, overheadAttackHeight, 0), firePoint.rotation);
+            audioSource.PlayOneShot(aboveFireBall);
+            isAbove = false;
         }
-        
+
     }
 
     // Update is called once per frame
@@ -56,8 +78,10 @@ public class FireBallController : MonoBehaviour
         if (lightableCount >= lightableRequired)
         {
             Debug.Log("All Lit:" + lightableCount);
-            
+
             allLit = true;
+            //stop repeating
+            CancelInvoke();
 
             Debug.Log("All Lit:" + allLit);
 
