@@ -11,6 +11,10 @@ public class FireBallController : MonoBehaviour
 
     public int lightableRequired = 4;
     public int lightableCount = 0;
+    public bool allLit = false;
+
+    public Light light1;
+    public Light light2;
     public Transform firePoint;
 
     public GameObject fireBallPrefab;
@@ -48,6 +52,13 @@ public class FireBallController : MonoBehaviour
         if (lightableCount >= lightableRequired)
         {
             Debug.Log("All Lit:" + lightableCount);
+            
+            allLit = true;
+
+            Debug.Log("All Lit:" + allLit);
+
+            light1.enabled = false;
+            light2.enabled = true;
         }
     }
 }
