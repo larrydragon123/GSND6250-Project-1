@@ -8,7 +8,8 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody rb;
-    private bool groundedPlayer;
+    public bool isGrounded;
+
 
     [SerializeField] private float playerSpeed = 2.0f;
     [SerializeField] private float jumpHeight = 1.0f;
@@ -32,12 +33,12 @@ public class PlayerController : MonoBehaviour
     public void OnJump(InputAction.CallbackContext context)
     {
         jumped = context.action.triggered;
-        Debug.Log("is ground:" + groundedPlayer);
+        // Debug.Log("is ground:" + groundedPlayer);
     }
 
     void Update()
     {
-        groundedPlayer = Physics.Raycast(transform.position, Vector3.down, 0.6f, LayerMask.GetMask("Default"));
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, 0.6f, LayerMask.GetMask("Default"));
 
         // Get the camera's forward and right vectors (in world space)
         Vector3 cameraForward = Camera.main.transform.forward;
@@ -56,7 +57,7 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector3(desiredVelocity.x, rb.velocity.y, desiredVelocity.z);
 
         // Changes the height position of the player
-        if (jumped && groundedPlayer)
+        if (jumped && isGrounded)
         {
             rb.velocity = new Vector3(rb.velocity.x, Mathf.Sqrt(jumpHeight * -2.0f * gravityValue), rb.velocity.z);
         }
@@ -71,4 +72,14 @@ public class PlayerController : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawRay(transform.position, Vector3.down * 0.6f);
     }
+
+    // void OnTriggerEnter(Collider other)
+    // {
+    //     isGrounded = true;
+    // }
+
+    // void OnTriggerExit(Collider other)
+    // {
+    //     isGrounded = false;
+    // }
 }
