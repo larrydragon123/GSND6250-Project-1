@@ -1,27 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
-    private CharacterController controller;
-    private Vector3 playerVelocity;
+    private Rigidbody rb;
     private bool groundedPlayer;
-    [SerializeField]
-    private float playerSpeed = 2.0f;
-    [SerializeField]
-    private float jumpHeight = 1.0f;
-    [SerializeField]
-    private float gravityValue = -9.81f;
+
+    [SerializeField] private float playerSpeed = 2.0f;
+    [SerializeField] private float jumpHeight = 1.0f;
+    [SerializeField] private float gravityValue = -9.81f;
 
     private Vector2 movementInput = Vector2.zero;
     private bool jumped = false;
 
     private void Start()
     {
-        controller = gameObject.GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true; // Prevents rigidbody from rotating due to collisions.
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -32,31 +31,33 @@ public class PlayerController : MonoBehaviour
     public void OnJump(InputAction.CallbackContext context)
     {
         jumped = context.action.triggered;
+        Debug.Log("is ground:" + groundedPlayer);
     }
 
     void Update()
     {
-        groundedPlayer = controller.isGrounded;
-        if (groundedPlayer && playerVelocity.y < 0)
-        {
-            playerVelocity.y = 0f;
-        }
+        groundedPlayer = Physics.Raycast(transform.position, Vector3.down, 0.6f, LayerMask.GetMask("Default"));
 
         Vector3 move = new Vector3(movementInput.x, 0, movementInput.y);
-        controller.Move(move * Time.deltaTime * playerSpeed);
+        Vector3 desiredVelocity = move * playerSpeed;
 
-        // if (move != Vector3.zero)
-        // {
-        //     gameObject.transform.forward = move;
-        // }
+        // Apply the desired velocity to the rigidbody's velocity
+        rb.velocity = new Vector3(desiredVelocity.x, rb.velocity.y, desiredVelocity.z);
 
-        // Changes the height position of the player..
+        // Changes the height position of the player
         if (jumped && groundedPlayer)
         {
-            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+            rb.velocity = new Vector3(rb.velocity.x, Mathf.Sqrt(jumpHeight * -2.0f * gravityValue), rb.velocity.z);
         }
 
-        playerVelocity.y += gravityValue * Time.deltaTime;
-        controller.Move(playerVelocity * Time.deltaTime);
+        // Apply gravity to the rigidbody
+        rb.AddForce(Vector3.up * gravityValue, ForceMode.Acceleration);
+    }
+
+    //draw gizmos to show the raycast
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(transform.position, Vector3.down * 0.6f);
     }
 }
