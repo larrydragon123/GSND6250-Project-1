@@ -23,8 +23,8 @@ public class LoadToNextLevel : MonoBehaviour
     {
         if(other.gameObject == player)
         {
-            //Invoke("SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);", 2f);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            //load next level
+            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

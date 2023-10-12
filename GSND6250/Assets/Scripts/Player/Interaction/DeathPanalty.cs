@@ -18,7 +18,7 @@ public class DeathPanalty : MonoBehaviour
         if (collision.gameObject == player)
         {
             //load this scene
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

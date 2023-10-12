@@ -14,7 +14,7 @@ public class SceneTransition : MonoBehaviour
     IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(3.2f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     // Update is called once per frame

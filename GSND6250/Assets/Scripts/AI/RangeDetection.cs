@@ -27,7 +27,7 @@ public class RangeDetection : MonoBehaviour
         {
             Debug.Log("Player is not in range");
             //restart the game
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
         }
 
         if(Vector3.Distance(transform.position, player.transform.position) > tooFarRange)

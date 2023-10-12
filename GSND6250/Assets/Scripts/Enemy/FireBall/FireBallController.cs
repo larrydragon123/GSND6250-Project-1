@@ -110,7 +110,7 @@ public class FireBallController : MonoBehaviour
             
 
             Debug.Log("Player wins");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
