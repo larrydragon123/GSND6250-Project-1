@@ -38,7 +38,17 @@ public class PlayerController : MonoBehaviour
     {
         groundedPlayer = Physics.Raycast(transform.position, Vector3.down, 0.6f, LayerMask.GetMask("Default"));
 
-        Vector3 move = new Vector3(movementInput.x, 0, movementInput.y);
+        // Get the camera's forward and right vectors (in world space)
+        Vector3 cameraForward = Camera.main.transform.forward;
+        Vector3 cameraRight = Camera.main.transform.right;
+
+        // Zero out the y-component to make the movement on the XZ plane
+        cameraForward.y = 0;
+        cameraRight.y = 0;
+        cameraForward.Normalize();
+        cameraRight.Normalize();
+
+        Vector3 move = cameraForward * movementInput.y + cameraRight * movementInput.x;
         Vector3 desiredVelocity = move * playerSpeed;
 
         // Apply the desired velocity to the rigidbody's velocity
