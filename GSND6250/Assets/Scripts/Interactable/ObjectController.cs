@@ -12,13 +12,15 @@ public class ObjectController : MonoBehaviour
     public bool isFloating = false;
     public bool isHighlighted = false;
 
+    public bool isStatic = false;
+
 
     public Material highlightMaterial;
     public Material defaultMaterial;
 
     int rand = 0;
 
-    
+
 
     private void Start()
     {
@@ -27,7 +29,7 @@ public class ObjectController : MonoBehaviour
 
     }
 
-    
+
     public void OnClick()
     {
         if (this.tag == "Mushroom")
@@ -59,14 +61,14 @@ public class ObjectController : MonoBehaviour
 
     void Float()
     {
-        float height = Random.Range(0.5f, 1.5f);
-        //float into air slowly
-        parentObject.transform.position = Vector3.MoveTowards(parentObject.transform.position, new Vector3(parentObject.transform.position.x, parentObject.transform.position.y + height, parentObject.transform.position.z), 0.5f);
+        // float height = Random.Range(0.5f, 1.5f);
+        // //float into air slowly
+        // parentObject.transform.position = Vector3.MoveTowards(parentObject.transform.position, new Vector3(parentObject.transform.position.x, parentObject.transform.position.y + height, parentObject.transform.position.z), 0.5f);
     }
 
     void Spin()
     {
-        
+
         switch (rand)
         {
             case 0:
@@ -92,7 +94,11 @@ public class ObjectController : MonoBehaviour
         }
         else if (isFloating)
         {
-            Spin();
+            if (!isStatic)
+            {
+                Spin();
+            }
+
         }
         if (!isHighlighted && player.GetComponent<PlayerSanityStats>().state >= 3)
         {
@@ -100,5 +106,6 @@ public class ObjectController : MonoBehaviour
             isHighlighted = true;
         }
         
+
     }
 }

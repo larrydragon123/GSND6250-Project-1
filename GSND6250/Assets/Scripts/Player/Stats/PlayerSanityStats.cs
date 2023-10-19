@@ -20,9 +20,12 @@ public class PlayerSanityStats : MonoBehaviour
 
     public GameObject mushroomController;
 
-    private void Start(){
+    public GameObject highText;
+
+    private void Start()
+    {
         state = 0;
-        
+
     }
     public void ColorEffect()
     {
@@ -57,37 +60,41 @@ public class PlayerSanityStats : MonoBehaviour
     }
     private void ShowText()
     {
-        textObject = new GameObject("WorldSpaceText");
+        if (previousObject)
+        {
 
-        // Attach a TextMesh component to the GameObject.
-        TextMesh textMesh = textObject.AddComponent<TextMesh>();
+            textObject = new GameObject("WorldSpaceText");
 
-        // Set the text content.
-        textMesh.text = "Hello, I am" + previousObject.GetComponent<ObjectController>().text;
+            // Attach a TextMesh component to the GameObject.
+            TextMesh textMesh = textObject.AddComponent<TextMesh>();
 
-        // Set the font size.
-        textMesh.fontSize = 36;
+            // Set the text content.
+            textMesh.text = "Hello, I am" + previousObject.GetComponent<ObjectController>().text;
 
-        // Set the font style (optional).
-        textMesh.fontStyle = FontStyle.Bold;
+            // Set the font size.
+            textMesh.fontSize = 36;
 
-        // Set the alignment (optional).
-        textMesh.alignment = TextAlignment.Center;
+            // Set the font style (optional).
+            textMesh.fontStyle = FontStyle.Bold;
 
-        // Set the anchor (optional).
-        textMesh.anchor = TextAnchor.MiddleCenter;
+            // Set the alignment (optional).
+            textMesh.alignment = TextAlignment.Center;
 
-        // Set the color (optional).
-        textMesh.color = Color.blue;
+            // Set the anchor (optional).
+            textMesh.anchor = TextAnchor.MiddleCenter;
 
-        // Position the text in world space.
-        textObject.transform.position = previousObject.transform.position;
+            // Set the color (optional).
+            textMesh.color = Color.blue;
 
-        // Rotate the text (optional).
-        // textObject.transform.rotation = transform.rotation;
+            // Position the text in world space.
+            textObject.transform.position = previousObject.transform.position;
 
-        // Scale the text (optional).
-        textObject.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+            // Rotate the text (optional).
+            // textObject.transform.rotation = transform.rotation;
+
+            // Scale the text (optional).
+            textObject.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
+        }
     }
 
     public void HideText()
@@ -131,7 +138,7 @@ public class PlayerSanityStats : MonoBehaviour
             }
 
             //show text
-            if (textObject == null)
+            if (textObject == null && state >=1)
             {
                 ShowText();
             }
@@ -152,6 +159,10 @@ public class PlayerSanityStats : MonoBehaviour
         if (!bloomEffect && state >= 5)
         {
             BloomEffect();
+        }
+        if (state >= 6)
+        {
+            highText.SetActive(true);
         }
     }
 }
