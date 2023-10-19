@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class PlayerSanityStats : MonoBehaviour
 {
@@ -10,19 +11,58 @@ public class PlayerSanityStats : MonoBehaviour
 
     private GameObject previousObject;
 
-    public GameObject textObject;
+    private GameObject textObject;
 
-    public void NextState(){
+    public PostProcessVolume postProcessVolume;
+    private ColorGrading colorGradingEffect;
+
+    private Bloom bloomEffect;
+
+    private void Start(){
+        state = 0;
+        
+        
+        
+    }
+    public void ColorEffect()
+    {
+        // Check if the Post-Processing Volume exists
+        if (postProcessVolume != null)
+        {
+            postProcessVolume.profile.TryGetSettings(out colorGradingEffect);
+            // Enable the Bloom effect
+            if (colorGradingEffect != null)
+            {
+                colorGradingEffect.active = true;
+            }
+        }
+    }
+    public void BloomEffect()
+    {
+        // Check if the Post-Processing Volume exists
+        if (postProcessVolume != null)
+        {
+            postProcessVolume.profile.TryGetSettings(out bloomEffect);
+            // Enable the Bloom effect
+            if (bloomEffect != null)
+            {
+                bloomEffect.active = true;
+            }
+        }
+    }
+    public void NextState()
+    {
         state++;
     }
-    private void ShowText(){
+    private void ShowText()
+    {
         textObject = new GameObject("WorldSpaceText");
 
         // Attach a TextMesh component to the GameObject.
         TextMesh textMesh = textObject.AddComponent<TextMesh>();
 
         // Set the text content.
-        textMesh.text = "Hello, I am"+ previousObject.GetComponent<ObjectController>().text;
+        textMesh.text = "Hello, I am" + previousObject.GetComponent<ObjectController>().text;
 
         // Set the font size.
         textMesh.fontSize = 36;
@@ -49,22 +89,25 @@ public class PlayerSanityStats : MonoBehaviour
         textObject.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
     }
 
-    public void HideText(){
+    public void HideText()
+    {
         Destroy(textObject);
     }
+
     private void Update()
     {
-        if(textObject){
+        if (textObject)
+        {
             textObject.transform.LookAt(transform);
             textObject.transform.Rotate(0, 180, 0);
         }
 
-        if (_selection != null)
-        {
-            var selectionRenderer = _selection.GetComponent<Renderer>();
-            selectionRenderer.material = previousObject.GetComponent<ObjectController>().defaultMaterial;
-            _selection = null;
-        }
+        // if (_selection != null)
+        // {
+        //     var selectionRenderer = _selection.GetComponent<Renderer>();
+        //     selectionRenderer.material = previousObject.GetComponent<ObjectController>().defaultMaterial;
+        //     _selection = null;
+        // }
 
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -72,12 +115,12 @@ public class PlayerSanityStats : MonoBehaviour
         {
             previousObject = hit.transform.gameObject;
             var selection = hit.transform;
-            previousObject.GetComponent<ObjectController>().defaultMaterial = selection.GetComponent<Renderer>().material;
-            var selectionRenderer = selection.GetComponent<Renderer>();
-            if (selectionRenderer != null)
-            {
-                selectionRenderer.material = previousObject.GetComponent<ObjectController>().highlightMaterial;
-            }
+            // previousObject.GetComponent<ObjectController>().defaultMaterial = selection.GetComponent<Renderer>().material;
+            // var selectionRenderer = selection.GetComponent<Renderer>();
+            // if (selectionRenderer != null)
+            // {
+            //     selectionRenderer.material = previousObject.GetComponent<ObjectController>().highlightMaterial;
+            // }
 
             _selection = selection;
             //if mouse clicked debug clicked
@@ -99,6 +142,15 @@ public class PlayerSanityStats : MonoBehaviour
             {
                 HideText();
             }
+        }
+
+        if (!colorGradingEffect && state >= 4)
+        {
+            ColorEffect();
+        }
+        if (!bloomEffect && state >= 5)
+        {
+            BloomEffect();
         }
     }
 }
