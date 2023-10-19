@@ -18,10 +18,10 @@ public class PlayerSanityStats : MonoBehaviour
 
     private Bloom bloomEffect;
 
+    public GameObject mushroomController;
+
     private void Start(){
         state = 0;
-        
-        
         
     }
     public void ColorEffect()
@@ -53,6 +53,7 @@ public class PlayerSanityStats : MonoBehaviour
     public void NextState()
     {
         state++;
+        mushroomController.GetComponent<MushroomController>().ShowMushroom(state);
     }
     private void ShowText()
     {
