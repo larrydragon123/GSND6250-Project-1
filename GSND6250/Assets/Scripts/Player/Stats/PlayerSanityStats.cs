@@ -21,6 +21,8 @@ public class PlayerSanityStats : MonoBehaviour
     private void Start(){
         state = 0;
         
+        
+        
     }
     public void ColorEffect()
     {
@@ -31,7 +33,7 @@ public class PlayerSanityStats : MonoBehaviour
             // Enable the Bloom effect
             if (colorGradingEffect != null)
             {
-                colorGradingEffect.enabled.value = true;
+                colorGradingEffect.active = true;
             }
         }
     }
@@ -44,7 +46,7 @@ public class PlayerSanityStats : MonoBehaviour
             // Enable the Bloom effect
             if (bloomEffect != null)
             {
-                bloomEffect.enabled.value = true;
+                bloomEffect.active = true;
             }
         }
     }
@@ -146,7 +148,7 @@ public class PlayerSanityStats : MonoBehaviour
         {
             ColorEffect();
         }
-        if (!colorGradingEffect && state >= 5)
+        if (!bloomEffect && state >= 5)
         {
             BloomEffect();
         }
