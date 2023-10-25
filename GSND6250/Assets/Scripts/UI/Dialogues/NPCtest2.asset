@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e373d802544f3b90f235c7efebe5e1, type: 3}
+  m_Name: NPCtest2
+  m_EditorClassIdentifier: 
+  version: 1.0
+  startNode:
+    <Guid>k__BackingField: 1122cda7-ac5b-45ef-9cdc-38946dd66b04
+    <NodeRect>k__BackingField:
+      serializedVersion: 2
+      x: 100
+      y: 100
+      width: 100
+      height: 100
+    name: Start
+  nodes:
+  - rid: 4124955893895004339
+  - rid: 4124955893895004340
+  - rid: 4124955893895004341
+  edges:
+  - rid: 4124955893895004342
+  - rid: 4124955893895004343
+  - rid: 4124955893895004344
+  properties: []
+  stickyNotes: []
+  groups: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 4124955893895004339
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 605ddc45-dbe7-4814-aefd-5637080fcb93
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 238
+          y: 73.99999
+          width: 209.33333
+          height: 134.66667
+        actor: Actor name
+        actorProfile: {fileID: 11400000, guid: 78b0337fa837d564e8faa0fbcd79361c, type: 2}
+        useActorProfile: 1
+        message: Hello, I the 2nd NPC
+    - rid: 4124955893895004340
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 65c6a097-1987-410e-ae5a-0395c9dfbe30
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 490
+          y: 73.99999
+          width: 209.33334
+          height: 134.66667
+        actor: Actor name
+        actorProfile: {fileID: 11400000, guid: 78b0337fa837d564e8faa0fbcd79361c, type: 2}
+        useActorProfile: 1
+        message: You need something?
+    - rid: 4124955893895004341
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 9ae2a5e1-c027-4ff8-b81b-5fe6316e9da0
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 758.6667
+          y: 73.99999
+          width: 209.33331
+          height: 134.66667
+        actor: Actor name
+        actorProfile: {fileID: 11400000, guid: 00498dacb9df50c4d9f1a09625fcbc5b, type: 2}
+        useActorProfile: 1
+        message: No, thanks, bye
+    - rid: 4124955893895004342
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 605ddc45-dbe7-4814-aefd-5637080fcb93
+          port: next
+        input:
+          node: 65c6a097-1987-410e-ae5a-0395c9dfbe30
+          port: previous
+    - rid: 4124955893895004343
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 65c6a097-1987-410e-ae5a-0395c9dfbe30
+          port: next
+        input:
+          node: 9ae2a5e1-c027-4ff8-b81b-5fe6316e9da0
+          port: previous
+    - rid: 4124955893895004344
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 1122cda7-ac5b-45ef-9cdc-38946dd66b04
+          port: next
+        input:
+          node: 605ddc45-dbe7-4814-aefd-5637080fcb93
+          port: previous
