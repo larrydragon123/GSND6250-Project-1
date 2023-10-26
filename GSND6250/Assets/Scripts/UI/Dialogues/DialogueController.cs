@@ -111,6 +111,12 @@ public class DialogueController : MonoBehaviour
             uiManager.AddTeam(currentNPCSprite);
 
         }
+        if(userEvent.Name == "Drunk")
+        {
+            Debug.Log("Drunk");
+            isDrunk = true;
+            runner.SetProperty<bool>("isDrunk", isDrunk);
+        }
 
     }
 
