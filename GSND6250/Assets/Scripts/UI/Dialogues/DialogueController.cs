@@ -20,6 +20,8 @@ public class DialogueController : MonoBehaviour
 
     private GameObject player;
 
+    public bool isDrunk = false;
+
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -36,6 +38,7 @@ public class DialogueController : MonoBehaviour
         conversation = newConversation;
         runner = new ConversationRunner(conversation);
         runner.OnConversationEvent.AddListener(HandleConversationEvent);
+        runner.SetProperty<bool>("isDrunk", isDrunk);
         HandleRestartConversation();
     }
     private void HandleConversationEvent(IConversationEvent e)

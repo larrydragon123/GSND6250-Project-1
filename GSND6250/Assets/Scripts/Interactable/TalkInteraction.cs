@@ -25,7 +25,7 @@ public class TalkInteraction : MonoBehaviour
     void OnTriggerEnter(Collider collider){
         if(collider.gameObject.tag == "Player" && !isTalked){
             Debug.Log("Player entered");
-            isTalked = true;
+            // isTalked = true;
             dialogueSystem.GetComponent<DialogueController>().ChangeConversation(conversation);
         }
     }
