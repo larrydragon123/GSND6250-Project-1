@@ -11,7 +11,7 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private UIManager uiManager;
 
     [Header("Buttons")]
-    [SerializeField] private Button restartConversationButton;
+    // [SerializeField] private Button restartConversationButton;
     // [SerializeField] private Button updateSavepointButton;
     // [SerializeField] private Button loadSavepointButton;
 
@@ -22,17 +22,28 @@ public class DialogueController : MonoBehaviour
 
     public bool isDrunk = false;
 
-    private void Start()
+    private GameObject currentNPC;
+    private Sprite currentNPCSprite;
+
+    private void Awake()
     {
         player = GameObject.FindWithTag("Player");
+    }
+    private void Start()
+    {
+
         // runner = new ConversationRunner(conversation);
         // runner.OnConversationEvent.AddListener(HandleConversationEvent);
-        restartConversationButton.onClick.AddListener(HandleRestartConversation);
+        // restartConversationButton.onClick.AddListener(HandleRestartConversation);
         // updateSavepointButton.onClick.AddListener(HandleUpdateSavepoint);
         // loadSavepointButton.onClick.AddListener(HandleLoadSavepoint);
         // updateSavepointButton.interactable = false;
     }
 
+    public void SetCurrentNPC(GameObject gameObject){
+        currentNPC = gameObject;
+        currentNPCSprite = gameObject.GetComponent<TalkInteraction>().avatarActor.Avatar;
+    }
     public void ChangeConversation(Conversation newConversation)
     {
         conversation = newConversation;
@@ -89,10 +100,17 @@ public class DialogueController : MonoBehaviour
 
     private void HandleChoice(ChoiceEvent e) => uiManager.ShowChoice(e.Actor, e.Message, null, e.Options);
 
-    private static void HandleUserEvent(UserEvent userEvent)
+    private void HandleUserEvent(UserEvent userEvent)
     {
-        if (userEvent.Name == "Food bought")
-            Debug.Log("We can use this event to update the inventory, for instance");
+        // if (userEvent.Name == "Food bought")
+        //     Debug.Log("We can use this event to update the inventory, for instance");
+        if (userEvent.Name == "TeamUp")
+        {
+            Debug.Log("Team up with NPC");
+            uiManager.AddTeam(currentNPCSprite);
+
+        }
+
     }
 
     private void HandleRestartConversation()

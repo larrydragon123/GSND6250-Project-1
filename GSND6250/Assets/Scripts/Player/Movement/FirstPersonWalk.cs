@@ -27,7 +27,7 @@ public class FirstPersonWalk : MonoBehaviour
     Vector2 currentDirVelocity;
     Vector3 velocity;
  
-    void Start()
+    void Awake()
     {
         controller = GetComponent<CharacterController>();
  
@@ -36,6 +36,8 @@ public class FirstPersonWalk : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = true;
         }
+
+        playerCamera.localEulerAngles = Vector3.zero;
     }
  
     void Update()

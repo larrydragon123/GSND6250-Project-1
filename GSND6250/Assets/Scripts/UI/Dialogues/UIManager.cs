@@ -13,8 +13,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI actorNameText;
     [SerializeField] private TextMeshProUGUI messageText;
     [SerializeField] private Button nextMessageButton;
+    [SerializeField] private GameObject teamPanel;
 
     [SerializeField] private GameObject choiceOptionButtonPrefab;
+    [SerializeField] private GameObject teamAvatarPrefab;
 
     public void ShowMessage(string actor, string message, Sprite avatar, Action onContinue)
     {
@@ -63,5 +65,12 @@ public class UIManager : MonoBehaviour
     {
         messageWindow.SetActive(false);
         choiceWindow.SetActive(false);
+    }
+
+    public void AddTeam(Sprite Avatar){
+        var instance = Instantiate(teamAvatarPrefab, Vector3.zero, Quaternion.identity);
+        instance.transform.SetParent(teamPanel.transform);
+        // instance.GetComponentInChildren<TextMeshProUGUI>().text = "";
+        instance.GetComponent<Image>().sprite = Avatar;
     }
 }
