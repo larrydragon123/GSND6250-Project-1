@@ -105,7 +105,7 @@ public class DialogueController : MonoBehaviour
     {
         // if (userEvent.Name == "Food bought")
         //     Debug.Log("We can use this event to update the inventory, for instance");
-        if (userEvent.Name == "TeamUp")
+        if (userEvent.Name == "TeamUP")
         {
             Debug.Log("Team up with NPC");
             uiManager.AddTeam(currentNPCSprite);
