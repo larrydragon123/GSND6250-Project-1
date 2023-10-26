@@ -1,0 +1,539 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e373d802544f3b90f235c7efebe5e1, type: 3}
+  m_Name: ArcherConv
+  m_EditorClassIdentifier: 
+  version: 1.0
+  startNode:
+    <Guid>k__BackingField: 4bec14c7-8205-4853-8d33-16395d398991
+    <NodeRect>k__BackingField:
+      serializedVersion: 2
+      x: 51
+      y: 200
+      width: 87
+      height: 40
+    name: Start
+  nodes:
+  - rid: 322813905518198872
+  - rid: 322813905518198873
+  - rid: 322813905518198874
+  - rid: 322813905518198875
+  - rid: 322813905518198876
+  - rid: 322813905518198877
+  - rid: 322813905518198878
+  - rid: 322813905518198879
+  - rid: 322813905518198880
+  - rid: 322813905518198881
+  - rid: 322813905518198882
+  - rid: 322813905518198883
+  - rid: 322813905518198884
+  edges:
+  - rid: 322813905518198885
+  - rid: 322813905518198886
+  - rid: 322813905518198887
+  - rid: 322813905518198888
+  - rid: 322813905518198889
+  - rid: 322813905518198890
+  - rid: 322813905518198891
+  - rid: 322813905518198892
+  - rid: 322813905518198893
+  - rid: 322813905518198894
+  - rid: 322813905518198895
+  - rid: 322813905518198896
+  - rid: 322813905518198897
+  - rid: 322813905518198898
+  - rid: 322813905518198899
+  - rid: 322813905518198900
+  - rid: 322813905518198901
+  - rid: 322813905518198902
+  - rid: 322813905518198903
+  - rid: 322813905518198904
+  - rid: 322813905518198905
+  - rid: 322813905518198906
+  - rid: 322813905518198907
+  properties:
+  - rid: 322813905518198908
+  stickyNotes:
+  - rid: 322813905518198909
+  groups: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 322813905518198872
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 85049088-97ee-4e7e-80b7-0ad1e48ede9f
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 228
+          y: 176
+          width: 208
+          height: 206
+        actor: Actor name
+        actorProfile: {fileID: 11400000, guid: edb23d7df34569943b78541618fcda37, type: 2}
+        useActorProfile: 1
+        message: "Oh? I See a traveler has come looking for my services! My name
+          is Xavier and I am an excellent shot. No enemy will ever see it coming
+          because I\u2019m that good."
+    - rid: 322813905518198873
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: c9418f6e-8eb7-44cb-8c75-4f4048d7684d
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 712
+          y: -103
+          width: 208
+          height: 245
+        actor: 
+        actorProfile: {fileID: 11400000, guid: edb23d7df34569943b78541618fcda37, type: 2}
+        useActorProfile: 1
+        message: "Oh? I See a traveler has come looking for my services! My name
+          is Xavier and I am an excellent shot. No enemy will ever see it coming
+          because I\u2019m that good."
+        options:
+        - guid: yes
+          label: Ooh please tell me more about your skills?
+        - guid: no
+          label: Are you able to shoot an apple above my head with your eyes closed?
+            I need teammates that I can trust.
+        - guid: d3791690-6995-40e8-b9d5-d80ac63fcd5b
+          label: "Sir, you talk a lot considering we\u2019re both rookies here."
+        - guid: 272cafe3-4e6c-4120-9dad-9b4b8054c971
+          label: "You couldn\u2019t hit water if you fell out of a boat"
+    - rid: 322813905518198874
+      type: {class: PropertyNode, ns: Conversa.Runtime.Nodes.PropertyNodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: f9b7088b-f259-40ef-84b4-d817cd31bf72
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 394
+          y: 427
+          width: 101
+          height: 40
+        propertyGuid: cfe08d37-000a-406d-8c9f-45bb4aca6600
+        propertyName: isDrunk
+    - rid: 322813905518198875
+      type: {class: ConditionalNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: f75cc102-b7ef-4405-b329-806decbd0149
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 521
+          y: 281
+          width: 152
+          height: 101
+    - rid: 322813905518198876
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: a5a72a0c-e658-4b9a-b018-3c8a82816646
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 712
+          y: 427
+          width: 208
+          height: 197
+        actor: 
+        actorProfile: {fileID: 11400000, guid: edb23d7df34569943b78541618fcda37, type: 2}
+        useActorProfile: 1
+        message: "Oh? I See a traveler has come looking for my services! My name
+          is Xavier and I am an excellent shot. No enemy will ever see it coming
+          because I\u2019m that good."
+        options:
+        - guid: yes
+          label: Ooh please tell me more about your skills?
+        - guid: no
+          label: "Sir, you talk a lot considering we\u2019re both rookies here."
+    - rid: 322813905518198877
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 8924c22e-96d1-457f-9954-765c0621e07a
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 1135
+          y: -321
+          width: 208
+          height: 245
+        actor: 
+        actorProfile: {fileID: 11400000, guid: edb23d7df34569943b78541618fcda37, type: 2}
+        useActorProfile: 1
+        message: "I\u2019m an archer! I can shoot enemies from a safe distance without
+          getting in your way, the perfect back up to any team"
+        options:
+        - guid: yes
+          label: Hmmm you might seem pretty useful for my team. What would you think
+            about joining me on my adventure?
+        - guid: no
+          label: WOW! We would just simply be unstoppable! You must join my party
+            and adventure with me, you have to!
+        - guid: 7c043cf2-661c-4f4d-a921-5ecd78ea6318
+          label: I think I am good.
+        - guid: 9cac4b56-b293-4036-b8cc-ef9708a5cca0
+          label: "You couldn\u2019t hit water if you fell out of a boat"
+    - rid: 322813905518198878
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: a57d4516-b229-4301-8196-9ff7ee546e31
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 1135
+          y: 32
+          width: 208
+          height: 221
+        actor: 
+        actorProfile: {fileID: 11400000, guid: edb23d7df34569943b78541618fcda37, type: 2}
+        useActorProfile: 1
+        message: "HA HA HA! I couldn\u2019t miss the apple even if I tried!"
+        options:
+        - guid: yes
+          label: WOW! We would just simply be unstoppable! You must join my party
+            and adventure with me, you have to!
+        - guid: no
+          label: God Damn those are some sexy abilities. How about you join my team?
+        - guid: 4490d6b1-f74e-48c5-ab7f-8fc489067c44
+          label: "You couldn\u2019t hit water if you fell out of a boat."
+    - rid: 322813905518198879
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 9e60a528-3dea-431d-9548-898339c55282
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 1135
+          y: 428
+          width: 208
+          height: 197
+        actor: 
+        actorProfile: {fileID: 11400000, guid: edb23d7df34569943b78541618fcda37, type: 2}
+        useActorProfile: 1
+        message: "I\u2019m an archer! I can shoot enemies from a safe distance without
+          getting in your way, the perfect back up to any team"
+        options:
+        - guid: yes
+          label: Hmmm you might seem pretty useful for my team. What would you think
+            about joining me on my adventure?
+        - guid: no
+          label: I think I am good.
+    - rid: 322813905518198880
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: a2430500-d58a-45a8-9026-5175284d4318
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 2066
+          y: 378
+          width: 208
+          height: 148
+        actor: Actor name
+        actorProfile: {fileID: 11400000, guid: edb23d7df34569943b78541618fcda37, type: 2}
+        useActorProfile: 1
+        message: " It\u2019s okay, I will surely be wanted by some other team. \r"
+    - rid: 322813905518198881
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: bc65248c-f5dc-4b67-8db7-76ae3d2b6396
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 2066
+          y: 166
+          width: 208
+          height: 148
+        actor: Actor name
+        actorProfile: {fileID: 11400000, guid: edb23d7df34569943b78541618fcda37, type: 2}
+        useActorProfile: 1
+        message: "I\u2019d rather die than travel along some drunk hooligan like
+          you.\r"
+    - rid: 322813905518198882
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: a5abfff1-ad7a-401f-a4da-69d955314101
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 1557
+          y: -321
+          width: 208
+          height: 197
+        actor: 
+        actorProfile: {fileID: 11400000, guid: edb23d7df34569943b78541618fcda37, type: 2}
+        useActorProfile: 1
+        message: "I think we would make a great team, you handle the front and I\u2019ll
+          pick out enemies!  Recruit Me?"
+        options:
+        - guid: yes
+          label: Yes
+        - guid: no
+          label: No
+    - rid: 322813905518198883
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: f1901392-3ebe-4644-8b27-5a7019e460f8
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 1557
+          y: -76
+          width: 208
+          height: 197
+        actor: 
+        actorProfile: {fileID: 11400000, guid: edb23d7df34569943b78541618fcda37, type: 2}
+        useActorProfile: 1
+        message: "You seem like a good time to be around, I\u2019ll join! Recruit
+          Me?"
+        options:
+        - guid: yes
+          label: Yes
+        - guid: no
+          label: No
+    - rid: 322813905518198884
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: fa0257b8-e05c-4fce-9abd-67b29dd179a5
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 1557
+          y: 181
+          width: 208
+          height: 197
+        actor: 
+        actorProfile: {fileID: 11400000, guid: edb23d7df34569943b78541618fcda37, type: 2}
+        useActorProfile: 1
+        message: "We\u2019'll be the sexiest and most scandalous team in the world!
+          People will revel in our utter glory and sexyness. Recruit me?"
+        options:
+        - guid: yes
+          label: Yes
+        - guid: no
+          label: No
+    - rid: 322813905518198885
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 4bec14c7-8205-4853-8d33-16395d398991
+          port: next
+        input:
+          node: 85049088-97ee-4e7e-80b7-0ad1e48ede9f
+          port: previous
+    - rid: 322813905518198886
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: f9b7088b-f259-40ef-84b4-d817cd31bf72
+          port: next
+        input:
+          node: f75cc102-b7ef-4405-b329-806decbd0149
+          port: condition
+    - rid: 322813905518198887
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: f75cc102-b7ef-4405-b329-806decbd0149
+          port: true
+        input:
+          node: c9418f6e-8eb7-44cb-8c75-4f4048d7684d
+          port: previous
+    - rid: 322813905518198888
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 85049088-97ee-4e7e-80b7-0ad1e48ede9f
+          port: next
+        input:
+          node: f75cc102-b7ef-4405-b329-806decbd0149
+          port: previous
+    - rid: 322813905518198889
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: f75cc102-b7ef-4405-b329-806decbd0149
+          port: false
+        input:
+          node: a5a72a0c-e658-4b9a-b018-3c8a82816646
+          port: previous
+    - rid: 322813905518198890
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: c9418f6e-8eb7-44cb-8c75-4f4048d7684d
+          port: yes
+        input:
+          node: 8924c22e-96d1-457f-9954-765c0621e07a
+          port: previous
+    - rid: 322813905518198891
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: c9418f6e-8eb7-44cb-8c75-4f4048d7684d
+          port: no
+        input:
+          node: a57d4516-b229-4301-8196-9ff7ee546e31
+          port: previous
+    - rid: 322813905518198892
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: a5a72a0c-e658-4b9a-b018-3c8a82816646
+          port: yes
+        input:
+          node: 9e60a528-3dea-431d-9548-898339c55282
+          port: previous
+    - rid: 322813905518198893
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: a5a72a0c-e658-4b9a-b018-3c8a82816646
+          port: no
+        input:
+          node: a2430500-d58a-45a8-9026-5175284d4318
+          port: previous
+    - rid: 322813905518198894
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: c9418f6e-8eb7-44cb-8c75-4f4048d7684d
+          port: d3791690-6995-40e8-b9d5-d80ac63fcd5b
+        input:
+          node: a2430500-d58a-45a8-9026-5175284d4318
+          port: previous
+    - rid: 322813905518198895
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: c9418f6e-8eb7-44cb-8c75-4f4048d7684d
+          port: 272cafe3-4e6c-4120-9dad-9b4b8054c971
+        input:
+          node: bc65248c-f5dc-4b67-8db7-76ae3d2b6396
+          port: previous
+    - rid: 322813905518198896
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 8924c22e-96d1-457f-9954-765c0621e07a
+          port: 9cac4b56-b293-4036-b8cc-ef9708a5cca0
+        input:
+          node: bc65248c-f5dc-4b67-8db7-76ae3d2b6396
+          port: previous
+    - rid: 322813905518198897
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: a57d4516-b229-4301-8196-9ff7ee546e31
+          port: 4490d6b1-f74e-48c5-ab7f-8fc489067c44
+        input:
+          node: bc65248c-f5dc-4b67-8db7-76ae3d2b6396
+          port: previous
+    - rid: 322813905518198898
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 9e60a528-3dea-431d-9548-898339c55282
+          port: no
+        input:
+          node: a2430500-d58a-45a8-9026-5175284d4318
+          port: previous
+    - rid: 322813905518198899
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 8924c22e-96d1-457f-9954-765c0621e07a
+          port: 7c043cf2-661c-4f4d-a921-5ecd78ea6318
+        input:
+          node: a2430500-d58a-45a8-9026-5175284d4318
+          port: previous
+    - rid: 322813905518198900
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 8924c22e-96d1-457f-9954-765c0621e07a
+          port: yes
+        input:
+          node: a5abfff1-ad7a-401f-a4da-69d955314101
+          port: previous
+    - rid: 322813905518198901
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: a5abfff1-ad7a-401f-a4da-69d955314101
+          port: no
+        input:
+          node: a2430500-d58a-45a8-9026-5175284d4318
+          port: previous
+    - rid: 322813905518198902
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 9e60a528-3dea-431d-9548-898339c55282
+          port: yes
+        input:
+          node: a5abfff1-ad7a-401f-a4da-69d955314101
+          port: previous
+    - rid: 322813905518198903
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 8924c22e-96d1-457f-9954-765c0621e07a
+          port: no
+        input:
+          node: f1901392-3ebe-4644-8b27-5a7019e460f8
+          port: previous
+    - rid: 322813905518198904
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: a57d4516-b229-4301-8196-9ff7ee546e31
+          port: yes
+        input:
+          node: f1901392-3ebe-4644-8b27-5a7019e460f8
+          port: previous
+    - rid: 322813905518198905
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: f1901392-3ebe-4644-8b27-5a7019e460f8
+          port: no
+        input:
+          node: a2430500-d58a-45a8-9026-5175284d4318
+          port: previous
+    - rid: 322813905518198906
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: a57d4516-b229-4301-8196-9ff7ee546e31
+          port: no
+        input:
+          node: fa0257b8-e05c-4fce-9abd-67b29dd179a5
+          port: previous
+    - rid: 322813905518198907
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: fa0257b8-e05c-4fce-9abd-67b29dd179a5
+          port: no
+        input:
+          node: a2430500-d58a-45a8-9026-5175284d4318
+          port: previous
+    - rid: 322813905518198908
+      type: {class: BooleanProperty, ns: Conversa.Runtime.Properties, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: cfe08d37-000a-406d-8c9f-45bb4aca6600
+        name: isDrunk
+        value: 0
+        initialValue: 0
+    - rid: 322813905518198909
+      type: {class: StickyNoteData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        guid: f51bcdc5-db61-4d0d-a1a2-cace6e06c88a
+        rect:
+          serializedVersion: 2
+          x: 1998
+          y: -126
+          width: 100
+          height: 100
+        title: 'If YES -> '
+        contents: RECRUIT

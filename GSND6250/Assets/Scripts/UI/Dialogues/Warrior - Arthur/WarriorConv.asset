@@ -1,0 +1,547 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e373d802544f3b90f235c7efebe5e1, type: 3}
+  m_Name: WarriorConv
+  m_EditorClassIdentifier: 
+  version: 1.0
+  startNode:
+    <Guid>k__BackingField: 4bec14c7-8205-4853-8d33-16395d398991
+    <NodeRect>k__BackingField:
+      serializedVersion: 2
+      x: 51
+      y: 200
+      width: 87
+      height: 40
+    name: Start
+  nodes:
+  - rid: 322813905518199214
+  - rid: 322813905518199215
+  - rid: 322813905518199216
+  - rid: 322813905518199217
+  - rid: 322813905518199218
+  - rid: 322813905518199219
+  - rid: 322813905518199220
+  - rid: 322813905518199221
+  - rid: 322813905518199222
+  - rid: 322813905518199223
+  - rid: 322813905518199224
+  - rid: 322813905518199225
+  - rid: 322813905518199226
+  edges:
+  - rid: 322813905518199227
+  - rid: 322813905518199228
+  - rid: 322813905518199229
+  - rid: 322813905518199230
+  - rid: 322813905518199231
+  - rid: 322813905518199232
+  - rid: 322813905518199233
+  - rid: 322813905518199234
+  - rid: 322813905518199235
+  - rid: 322813905518199236
+  - rid: 322813905518199237
+  - rid: 322813905518199238
+  - rid: 322813905518199239
+  - rid: 322813905518199240
+  - rid: 322813905518199241
+  - rid: 322813905518199242
+  - rid: 322813905518199243
+  - rid: 322813905518199244
+  - rid: 322813905518199245
+  - rid: 322813905518199246
+  - rid: 322813905518199247
+  - rid: 322813905518199248
+  - rid: 322813905518199249
+  properties:
+  - rid: 322813905518199250
+  stickyNotes:
+  - rid: 322813905518199251
+  groups: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 322813905518199214
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 85049088-97ee-4e7e-80b7-0ad1e48ede9f
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 232
+          y: 163
+          width: 208
+          height: 206
+        actor: Actor name
+        actorProfile: {fileID: 11400000, guid: 27e34e865376bb644be85a3131759c40, type: 2}
+        useActorProfile: 1
+        message: Hail, traveler! I am Sam, a warrior of unmatched strength and valor.
+          My blade is as sharp as my resolve. Enemies tremble before me, and I fear
+          no danger.
+    - rid: 322813905518199215
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: c9418f6e-8eb7-44cb-8c75-4f4048d7684d
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 712
+          y: -90
+          width: 208
+          height: 245
+        actor: 
+        actorProfile: {fileID: 11400000, guid: 27e34e865376bb644be85a3131759c40, type: 2}
+        useActorProfile: 1
+        message: Hail, traveler! I am Sam, a warrior of unmatched strength and valor.
+          My blade is as sharp as my resolve. Enemies tremble before me, and I fear
+          no danger.
+        options:
+        - guid: yes
+          label: ell me more about your combat skills, honored warrior.
+        - guid: no
+          label: You seem like you have lived through a lot troublleee oooooh mighty
+            warrior? Would you tell me of your feats?
+        - guid: d3791690-6995-40e8-b9d5-d80ac63fcd5b
+          label: Your boasts mean nothing to me. Let's see if you can prove your
+            worth in battle.
+        - guid: 272cafe3-4e6c-4120-9dad-9b4b8054c971
+          label: You are a liar, Prove you are a warrior of honor and Spar with me
+            right here and now.
+    - rid: 322813905518199216
+      type: {class: PropertyNode, ns: Conversa.Runtime.Nodes.PropertyNodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: f9b7088b-f259-40ef-84b4-d817cd31bf72
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 394
+          y: 427
+          width: 101
+          height: 40
+        propertyGuid: cfe08d37-000a-406d-8c9f-45bb4aca6600
+        propertyName: isDrunk
+    - rid: 322813905518199217
+      type: {class: ConditionalNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: f75cc102-b7ef-4405-b329-806decbd0149
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 521
+          y: 281
+          width: 152
+          height: 101
+    - rid: 322813905518199218
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: a5a72a0c-e658-4b9a-b018-3c8a82816646
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 712
+          y: 427
+          width: 208
+          height: 197
+        actor: 
+        actorProfile: {fileID: 11400000, guid: 27e34e865376bb644be85a3131759c40, type: 2}
+        useActorProfile: 1
+        message: Hail, traveler! I am Sam, a warrior of unmatched strength and valor.
+          My blade is as sharp as my resolve. Enemies tremble before me, and I fear
+          no danger.
+        options:
+        - guid: yes
+          label: ell me more about your combat skills, honored warrior.
+        - guid: no
+          label: Your boasts mean nothing to me. Let's see if you can prove your
+            worth in battle.
+    - rid: 322813905518199219
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 8924c22e-96d1-457f-9954-765c0621e07a
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 1135
+          y: -321
+          width: 208
+          height: 245
+        actor: 
+        actorProfile: {fileID: 11400000, guid: 27e34e865376bb644be85a3131759c40, type: 2}
+        useActorProfile: 1
+        message: I am a fierce warrior, skilled in the art of close combat. I'll
+          protect you and your team from harm's way, guaranteeing your safety on
+          the battlefield.
+        options:
+        - guid: yes
+          label: You're exactly what I need in my party. Will you join me on this
+            adventure?
+        - guid: no
+          label: WOW! We would just simply be unstoppable! You must join my party
+            and adventure with me, you have to!
+        - guid: 7c043cf2-661c-4f4d-a921-5ecd78ea6318
+          label: Not impressed. I'll find someone else.
+        - guid: 9cac4b56-b293-4036-b8cc-ef9708a5cca0
+          label: ou are a liar, Prove you are a warrior of honor and Spar with me
+            right here and now!
+    - rid: 322813905518199220
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: a57d4516-b229-4301-8196-9ff7ee546e31
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 1135
+          y: 45
+          width: 208
+          height: 221
+        actor: 
+        actorProfile: {fileID: 11400000, guid: 27e34e865376bb644be85a3131759c40, type: 2}
+        useActorProfile: 1
+        message: Ha! I'd cleave through mountains if I had to!
+        options:
+        - guid: yes
+          label: With you by my side, victory is assured. Let's embark on this journey
+            together and bask in all the honor, treasures and loyalty from the Kingdom
+            our adventures will bring us
+        - guid: no
+          label: "Your skills are unquestionable. Join me, and we'll conquer the
+            world, we\u2019ll make even the greatest kings fear our names!"
+        - guid: 4490d6b1-f74e-48c5-ab7f-8fc489067c44
+          label: ou are a liar, Prove you are a warrior of honor and Spar with me
+            right here and now!
+    - rid: 322813905518199221
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 9e60a528-3dea-431d-9548-898339c55282
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 1135
+          y: 428
+          width: 208
+          height: 197
+        actor: 
+        actorProfile: {fileID: 11400000, guid: 27e34e865376bb644be85a3131759c40, type: 2}
+        useActorProfile: 1
+        message: I am a fierce warrior, skilled in the art of close combat. I'll
+          protect you and your team from harm's way, guaranteeing your safety on
+          the battlefield.
+        options:
+        - guid: yes
+          label: You're exactly what I need in my party. Will you join me on this
+            adventure?
+        - guid: no
+          label: Not impressed. I'll find someone else
+    - rid: 322813905518199222
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: a2430500-d58a-45a8-9026-5175284d4318
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 2066
+          y: 378
+          width: 208
+          height: 148
+        actor: Actor name
+        actorProfile: {fileID: 11400000, guid: 27e34e865376bb644be85a3131759c40, type: 2}
+        useActorProfile: 1
+        message: "No worries, I'm sure there's a worthy cause out there for me.\r"
+    - rid: 322813905518199223
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: bc65248c-f5dc-4b67-8db7-76ae3d2b6396
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 2066
+          y: 80
+          width: 208
+          height: 148
+        actor: Actor name
+        actorProfile: {fileID: 11400000, guid: 27e34e865376bb644be85a3131759c40, type: 2}
+        useActorProfile: 1
+        message: " I'd rather face a dragon alone than travel with a coward like
+          you.\r"
+    - rid: 322813905518199224
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: a5abfff1-ad7a-401f-a4da-69d955314101
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 1557
+          y: -321
+          width: 208
+          height: 197
+        actor: 
+        actorProfile: {fileID: 11400000, guid: 27e34e865376bb644be85a3131759c40, type: 2}
+        useActorProfile: 1
+        message: 'I''ll protect you and your team from harm''s way, let me join you!  '
+        options:
+        - guid: yes
+          label: Yes
+        - guid: no
+          label: No
+    - rid: 322813905518199225
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: f1901392-3ebe-4644-8b27-5a7019e460f8
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 1557
+          y: -76
+          width: 208
+          height: 197
+        actor: 
+        actorProfile: {fileID: 11400000, guid: 27e34e865376bb644be85a3131759c40, type: 2}
+        useActorProfile: 1
+        message: We shall explore these lands and become the most respected warriors
+          in the kingdom! Recruit me?
+        options:
+        - guid: yes
+          label: Yes
+        - guid: no
+          label: No
+    - rid: 322813905518199226
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: fa0257b8-e05c-4fce-9abd-67b29dd179a5
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 1605
+          y: 168
+          width: 208
+          height: 197
+        actor: 
+        actorProfile: {fileID: 11400000, guid: 27e34e865376bb644be85a3131759c40, type: 2}
+        useActorProfile: 1
+        message: "We will be the conqueror of Kingdoms, the destroyers of whole empires,
+          we are Gods not mere people. Let\u2019s start our partnered dominion! "
+        options:
+        - guid: yes
+          label: Yes
+        - guid: no
+          label: No
+    - rid: 322813905518199227
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 4bec14c7-8205-4853-8d33-16395d398991
+          port: next
+        input:
+          node: 85049088-97ee-4e7e-80b7-0ad1e48ede9f
+          port: previous
+    - rid: 322813905518199228
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: f9b7088b-f259-40ef-84b4-d817cd31bf72
+          port: next
+        input:
+          node: f75cc102-b7ef-4405-b329-806decbd0149
+          port: condition
+    - rid: 322813905518199229
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: f75cc102-b7ef-4405-b329-806decbd0149
+          port: true
+        input:
+          node: c9418f6e-8eb7-44cb-8c75-4f4048d7684d
+          port: previous
+    - rid: 322813905518199230
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 85049088-97ee-4e7e-80b7-0ad1e48ede9f
+          port: next
+        input:
+          node: f75cc102-b7ef-4405-b329-806decbd0149
+          port: previous
+    - rid: 322813905518199231
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: f75cc102-b7ef-4405-b329-806decbd0149
+          port: false
+        input:
+          node: a5a72a0c-e658-4b9a-b018-3c8a82816646
+          port: previous
+    - rid: 322813905518199232
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: c9418f6e-8eb7-44cb-8c75-4f4048d7684d
+          port: yes
+        input:
+          node: 8924c22e-96d1-457f-9954-765c0621e07a
+          port: previous
+    - rid: 322813905518199233
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: c9418f6e-8eb7-44cb-8c75-4f4048d7684d
+          port: no
+        input:
+          node: a57d4516-b229-4301-8196-9ff7ee546e31
+          port: previous
+    - rid: 322813905518199234
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: a5a72a0c-e658-4b9a-b018-3c8a82816646
+          port: yes
+        input:
+          node: 9e60a528-3dea-431d-9548-898339c55282
+          port: previous
+    - rid: 322813905518199235
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: a5a72a0c-e658-4b9a-b018-3c8a82816646
+          port: no
+        input:
+          node: a2430500-d58a-45a8-9026-5175284d4318
+          port: previous
+    - rid: 322813905518199236
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: c9418f6e-8eb7-44cb-8c75-4f4048d7684d
+          port: d3791690-6995-40e8-b9d5-d80ac63fcd5b
+        input:
+          node: a2430500-d58a-45a8-9026-5175284d4318
+          port: previous
+    - rid: 322813905518199237
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: c9418f6e-8eb7-44cb-8c75-4f4048d7684d
+          port: 272cafe3-4e6c-4120-9dad-9b4b8054c971
+        input:
+          node: bc65248c-f5dc-4b67-8db7-76ae3d2b6396
+          port: previous
+    - rid: 322813905518199238
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 8924c22e-96d1-457f-9954-765c0621e07a
+          port: 9cac4b56-b293-4036-b8cc-ef9708a5cca0
+        input:
+          node: bc65248c-f5dc-4b67-8db7-76ae3d2b6396
+          port: previous
+    - rid: 322813905518199239
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: a57d4516-b229-4301-8196-9ff7ee546e31
+          port: 4490d6b1-f74e-48c5-ab7f-8fc489067c44
+        input:
+          node: bc65248c-f5dc-4b67-8db7-76ae3d2b6396
+          port: previous
+    - rid: 322813905518199240
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 9e60a528-3dea-431d-9548-898339c55282
+          port: no
+        input:
+          node: a2430500-d58a-45a8-9026-5175284d4318
+          port: previous
+    - rid: 322813905518199241
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 8924c22e-96d1-457f-9954-765c0621e07a
+          port: 7c043cf2-661c-4f4d-a921-5ecd78ea6318
+        input:
+          node: a2430500-d58a-45a8-9026-5175284d4318
+          port: previous
+    - rid: 322813905518199242
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 8924c22e-96d1-457f-9954-765c0621e07a
+          port: yes
+        input:
+          node: a5abfff1-ad7a-401f-a4da-69d955314101
+          port: previous
+    - rid: 322813905518199243
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: a5abfff1-ad7a-401f-a4da-69d955314101
+          port: no
+        input:
+          node: a2430500-d58a-45a8-9026-5175284d4318
+          port: previous
+    - rid: 322813905518199244
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 9e60a528-3dea-431d-9548-898339c55282
+          port: yes
+        input:
+          node: a5abfff1-ad7a-401f-a4da-69d955314101
+          port: previous
+    - rid: 322813905518199245
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 8924c22e-96d1-457f-9954-765c0621e07a
+          port: no
+        input:
+          node: f1901392-3ebe-4644-8b27-5a7019e460f8
+          port: previous
+    - rid: 322813905518199246
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: a57d4516-b229-4301-8196-9ff7ee546e31
+          port: yes
+        input:
+          node: f1901392-3ebe-4644-8b27-5a7019e460f8
+          port: previous
+    - rid: 322813905518199247
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: f1901392-3ebe-4644-8b27-5a7019e460f8
+          port: no
+        input:
+          node: a2430500-d58a-45a8-9026-5175284d4318
+          port: previous
+    - rid: 322813905518199248
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: a57d4516-b229-4301-8196-9ff7ee546e31
+          port: no
+        input:
+          node: fa0257b8-e05c-4fce-9abd-67b29dd179a5
+          port: previous
+    - rid: 322813905518199249
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: fa0257b8-e05c-4fce-9abd-67b29dd179a5
+          port: no
+        input:
+          node: a2430500-d58a-45a8-9026-5175284d4318
+          port: previous
+    - rid: 322813905518199250
+      type: {class: BooleanProperty, ns: Conversa.Runtime.Properties, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: cfe08d37-000a-406d-8c9f-45bb4aca6600
+        name: isDrunk
+        value: 0
+        initialValue: 0
+    - rid: 322813905518199251
+      type: {class: StickyNoteData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        guid: f51bcdc5-db61-4d0d-a1a2-cace6e06c88a
+        rect:
+          serializedVersion: 2
+          x: 1998
+          y: -126
+          width: 100
+          height: 100
+        title: 'If YES -> '
+        contents: RECRUIT
