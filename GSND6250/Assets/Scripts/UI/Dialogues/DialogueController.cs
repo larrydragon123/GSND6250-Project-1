@@ -9,6 +9,7 @@ public class DialogueController : MonoBehaviour
 {
     [SerializeField] public Conversation conversation;
     [SerializeField] private UIManager uiManager;
+    [SerializeField] private AvatarActor playerActor;
 
     [Header("Buttons")]
     // [SerializeField] private Button restartConversationButton;

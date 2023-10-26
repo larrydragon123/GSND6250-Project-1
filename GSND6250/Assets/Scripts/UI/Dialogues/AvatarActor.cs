@@ -6,5 +6,5 @@ public class AvatarActor : Actor
     {
         [SerializeField] private Sprite avatar;
         public Sprite Avatar => avatar;
-        public bool isDruck = false;
+
     }
