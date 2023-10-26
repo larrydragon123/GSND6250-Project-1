@@ -23,23 +23,31 @@ MonoBehaviour:
       height: 100
     name: Start
   nodes:
-  - rid: 322813923134275621
-  - rid: 322813923134275622
-  - rid: 322813923134275623
-  - rid: 322813923134275624
-  - rid: 322813923134275625
+  - rid: 322813923134276029
+  - rid: 322813923134276030
+  - rid: 322813923134276031
+  - rid: 322813923134276032
+  - rid: 322813923134276033
+  - rid: 322813923134276034
+  - rid: 322813923134276035
+  - rid: 322813923134276036
   edges:
-  - rid: 322813923134275626
-  - rid: 322813923134275627
-  - rid: 322813923134275628
-  - rid: 322813923134275629
-  properties: []
-  stickyNotes: []
+  - rid: 322813923134276037
+  - rid: 322813923134276038
+  - rid: 322813923134276039
+  - rid: 322813923134276040
+  - rid: 322813923134276041
+  - rid: 322813923134276042
+  - rid: 322813923134276043
+  properties:
+  - rid: 322813923134276044
+  stickyNotes:
+  - rid: 322813923134276045
   groups: []
   references:
     version: 2
     RefIds:
-    - rid: 322813923134275621
+    - rid: 322813923134276029
       type: {class: BookmarkNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: 0949b804-50fa-4c7a-ba5a-d694ff09a62e
@@ -50,7 +58,7 @@ MonoBehaviour:
           width: 87
           height: 40
         name: Start
-    - rid: 322813923134275622
+    - rid: 322813923134276030
       type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: b6ea0cf2-c1ec-499d-aa88-606d4ab248f3
@@ -66,7 +74,7 @@ MonoBehaviour:
         message: "Hold on there young traveler, once you pass this door your journey
           starts. You should take this time to make sure your party is at full strength
           and ready to depart!\r"
-    - rid: 322813923134275623
+    - rid: 322813923134276031
       type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: efc30c23-0e42-455b-a4c0-533414614b96
@@ -87,7 +95,7 @@ MonoBehaviour:
           label: I am ready to leave, sir!
         - guid: no
           label: "I think I\u2019ll take another moment to prepare"
-    - rid: 322813923134275624
+    - rid: 322813923134276032
       type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: 8668bf08-110b-4494-99d6-b2f39047e50a
@@ -103,7 +111,7 @@ MonoBehaviour:
         message: 'May you have a safe journey ahead of you, traveler.
 
 '
-    - rid: 322813923134275625
+    - rid: 322813923134276033
       type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: 0449adb2-1784-4b15-aa39-525ff30c1b0c
@@ -117,7 +125,58 @@ MonoBehaviour:
         actorProfile: {fileID: 11400000, guid: 2dd4afb59c3ba7549a1ec33db670d944, type: 2}
         useActorProfile: 1
         message: "Come back when you're fully prepared, traveler.\r"
-    - rid: 322813923134275626
+    - rid: 322813923134276034
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: ce57c53f-a0bd-43d7-b099-f044bfd28d0a
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 233
+          y: -13
+          width: 208
+          height: 197
+        actor: 
+        actorProfile: {fileID: 11400000, guid: 2dd4afb59c3ba7549a1ec33db670d944, type: 2}
+        useActorProfile: 1
+        message: 'Hold on there young traveler, once you pass this door your journey
+          starts. You should take this time to make sure your party is at full strength
+          and ready to depart! '
+        options:
+        - guid: yes
+          label: I am ready to leave, sir!
+        - guid: no
+          label: "I think I\u2019ll take another moment to prepare"
+    - rid: 322813923134276035
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 7a68fdc4-c69a-4ea5-b2cb-6129421fe901
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 578
+          y: 33
+          width: NaN
+          height: NaN
+        actor: Actor name
+        actorProfile: {fileID: 11400000, guid: 2dd4afb59c3ba7549a1ec33db670d944, type: 2}
+        useActorProfile: 1
+        message: ' May you have a safe journey ahead of you, traveler.
+
+'
+    - rid: 322813923134276036
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 85886c7a-d9f4-47a6-ad11-c71309972f25
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 508
+          y: 218
+          width: NaN
+          height: NaN
+        actor: Actor name
+        actorProfile: {fileID: 11400000, guid: 2dd4afb59c3ba7549a1ec33db670d944, type: 2}
+        useActorProfile: 1
+        message: "Come back when you're fully prepared, traveler.\r"
+    - rid: 322813923134276037
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -126,7 +185,7 @@ MonoBehaviour:
         input:
           node: b6ea0cf2-c1ec-499d-aa88-606d4ab248f3
           port: previous
-    - rid: 322813923134275627
+    - rid: 322813923134276038
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -135,7 +194,7 @@ MonoBehaviour:
         input:
           node: efc30c23-0e42-455b-a4c0-533414614b96
           port: previous
-    - rid: 322813923134275628
+    - rid: 322813923134276039
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -144,7 +203,7 @@ MonoBehaviour:
         input:
           node: 8668bf08-110b-4494-99d6-b2f39047e50a
           port: previous
-    - rid: 322813923134275629
+    - rid: 322813923134276040
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -153,3 +212,47 @@ MonoBehaviour:
         input:
           node: 0449adb2-1784-4b15-aa39-525ff30c1b0c
           port: previous
+    - rid: 322813923134276041
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 137aa70e-a786-481b-ab52-5449e46eeb44
+          port: next
+        input:
+          node: ce57c53f-a0bd-43d7-b099-f044bfd28d0a
+          port: previous
+    - rid: 322813923134276042
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: ce57c53f-a0bd-43d7-b099-f044bfd28d0a
+          port: yes
+        input:
+          node: 7a68fdc4-c69a-4ea5-b2cb-6129421fe901
+          port: previous
+    - rid: 322813923134276043
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: ce57c53f-a0bd-43d7-b099-f044bfd28d0a
+          port: no
+        input:
+          node: 85886c7a-d9f4-47a6-ad11-c71309972f25
+          port: previous
+    - rid: 322813923134276044
+      type: {class: EventProperty, ns: Conversa.Runtime.Properties, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: e4bfd239-cd92-4372-ad16-ee5eb1ff312e
+        name: Leaving
+    - rid: 322813923134276045
+      type: {class: StickyNoteData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        guid: eab1521f-8d7c-4f21-87f0-fb90f884a335
+        rect:
+          serializedVersion: 2
+          x: 841
+          y: 24
+          width: 100
+          height: 100
+        title: after this leave
+        contents: New content

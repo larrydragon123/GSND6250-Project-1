@@ -23,17 +23,36 @@ MonoBehaviour:
       height: 100
     name: Start
   nodes:
-  - rid: 322813923134275633
-  - rid: 322813923134275634
-  - rid: 322813923134275635
-  edges: []
+  - rid: 322813923134275939
+  - rid: 322813923134275940
+  - rid: 322813923134275941
+  - rid: 322813923134275942
+  - rid: 322813923134275943
+  - rid: 322813923134275944
+  - rid: 322813923134275945
+  - rid: 322813923134275946
+  - rid: 322813923134275947
+  edges:
+  - rid: 322813923134275948
+  - rid: 322813923134275949
+  - rid: 322813923134275950
+  - rid: 322813923134275951
+  - rid: 322813923134275952
+  - rid: 322813923134275953
+  - rid: 322813923134275954
+  - rid: 322813923134275955
+  - rid: 322813923134275956
+  - rid: 322813923134275957
+  - rid: 322813923134275958
+  - rid: 322813923134275959
+  - rid: 322813923134275960
   properties: []
   stickyNotes: []
   groups: []
   references:
     version: 2
     RefIds:
-    - rid: 322813923134275633
+    - rid: 322813923134275939
       type: {class: BookmarkNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: f6ab504d-2d9f-47f9-b9d7-c30d59c85bad
@@ -44,7 +63,7 @@ MonoBehaviour:
           width: NaN
           height: NaN
         name: Start
-    - rid: 322813923134275634
+    - rid: 322813923134275940
       type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: 3cdfeaec-a34a-4d99-b341-72052a1c7241
@@ -69,22 +88,252 @@ MonoBehaviour:
           label: How many party members can I recruit?
         - guid: b08c440b-91f6-47f5-b899-d270c3adfed3
           label: "I\u2019m good, thank you!"
-    - rid: 322813923134275635
+    - rid: 322813923134275941
       type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: c0b3ced8-52c2-4c81-a3c3-4278368408f3
         <NodeRect>k__BackingField:
           serializedVersion: 2
-          x: 2234.417
-          y: -210.14162
-          width: NaN
-          height: NaN
+          x: 2104
+          y: -420
+          width: 208
+          height: 197
         actor: 
-        actorProfile: {fileID: 0}
-        useActorProfile: 0
-        message: 
+        actorProfile: {fileID: 11400000, guid: a7f6dc58fb770824b91fe30e03154c30, type: 2}
+        useActorProfile: 1
+        message: 'bsolutely, let me know if you need a refill kiddo. Anything else
+          ya need? '
         options:
         - guid: yes
-          label: Yes
+          label: How many party members can I recruit?
         - guid: no
-          label: No
+          label: "I\u2019m good, thank you!"
+    - rid: 322813923134275942
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: d3e36b85-f4b5-49d0-b93f-1de7e6cbc064
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 2366
+          y: -439
+          width: 208
+          height: 197
+        actor: 
+        actorProfile: {fileID: 11400000, guid: a7f6dc58fb770824b91fe30e03154c30, type: 2}
+        useActorProfile: 1
+        message: 'ou can recruit as many as you need to. However only three can join
+          you on quests. '
+        options:
+        - guid: yes
+          label: Could you get me some beer?
+        - guid: no
+          label: "I\u2019m good, thank you!"
+    - rid: 322813923134275943
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: fed891e8-bb2c-45c9-ad51-9fade8e6f3dd
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 2061
+          y: -59
+          width: 208
+          height: 148
+        actor: Actor name
+        actorProfile: {fileID: 11400000, guid: a7f6dc58fb770824b91fe30e03154c30, type: 2}
+        useActorProfile: 1
+        message: Enjoy youyr time at Lord Barney's Tavern
+    - rid: 322813923134275944
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: aa5bb918-2a83-48ef-8ee5-bd675e5999be
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 222
+          y: -13
+          width: 208
+          height: 307
+        actor: Actor name
+        actorProfile: {fileID: 11400000, guid: a7f6dc58fb770824b91fe30e03154c30, type: 2}
+        useActorProfile: 1
+        message: "Greetings Traveler Welcome to Lord Barney\u2019s Tavern. Our questboard
+          features mostly beginners quests so make sure you have the party you want
+          before departing. There are six adventurers here currently looking to party
+          up. You should introduce yourself to them before you depart. \n"
+    - rid: 322813923134275945
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 5b5ca43b-0829-48fe-83d5-d4e134c524f4
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 501
+          y: -123
+          width: 208
+          height: 221
+        actor: 
+        actorProfile: {fileID: 11400000, guid: a7f6dc58fb770824b91fe30e03154c30, type: 2}
+        useActorProfile: 1
+        message: "Let me know if there\u2019s anything else you\u2019d like. "
+        options:
+        - guid: yes
+          label: Could you get me some beer?
+        - guid: no
+          label: How many party members can I recruit?
+        - guid: b8cba9b4-640b-4c37-bfbd-c970ac00cd4f
+          label: "I\u2019m good, thank you!"
+    - rid: 322813923134275946
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: ee1098cd-d500-45b6-a7fa-bd9e0e117e89
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 871
+          y: -123
+          width: 208
+          height: 197
+        actor: 
+        actorProfile: {fileID: 11400000, guid: a7f6dc58fb770824b91fe30e03154c30, type: 2}
+        useActorProfile: 1
+        message: 'Absolutely, let me know if you need a refill kiddo. Anything else
+          ya need? '
+        options:
+        - guid: yes
+          label: How many party members can I recruit?
+        - guid: no
+          label: "I\u2019m good, thank you!"
+    - rid: 322813923134275947
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 10e972c8-b8c2-4a9b-8751-4092b1031b6b
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 767
+          y: 193
+          width: 208
+          height: 197
+        actor: 
+        actorProfile: {fileID: 11400000, guid: a7f6dc58fb770824b91fe30e03154c30, type: 2}
+        useActorProfile: 1
+        message: 'You can recruit as many as you need to. However only three can
+          join you on quests. '
+        options:
+        - guid: yes
+          label: Could you get me some beer?
+        - guid: no
+          label: "I\u2019m good, thank you!"
+    - rid: 322813923134275948
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: f6ab504d-2d9f-47f9-b9d7-c30d59c85bad
+          port: next
+        input:
+          node: 3cdfeaec-a34a-4d99-b341-72052a1c7241
+          port: previous
+    - rid: 322813923134275949
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 3cdfeaec-a34a-4d99-b341-72052a1c7241
+          port: yes
+        input:
+          node: c0b3ced8-52c2-4c81-a3c3-4278368408f3
+          port: previous
+    - rid: 322813923134275950
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: c0b3ced8-52c2-4c81-a3c3-4278368408f3
+          port: yes
+        input:
+          node: d3e36b85-f4b5-49d0-b93f-1de7e6cbc064
+          port: previous
+    - rid: 322813923134275951
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: d3e36b85-f4b5-49d0-b93f-1de7e6cbc064
+          port: yes
+        input:
+          node: c0b3ced8-52c2-4c81-a3c3-4278368408f3
+          port: previous
+    - rid: 322813923134275952
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 3cdfeaec-a34a-4d99-b341-72052a1c7241
+          port: b08c440b-91f6-47f5-b899-d270c3adfed3
+        input:
+          node: fed891e8-bb2c-45c9-ad51-9fade8e6f3dd
+          port: previous
+    - rid: 322813923134275953
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: c0b3ced8-52c2-4c81-a3c3-4278368408f3
+          port: no
+        input:
+          node: fed891e8-bb2c-45c9-ad51-9fade8e6f3dd
+          port: previous
+    - rid: 322813923134275954
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: d3e36b85-f4b5-49d0-b93f-1de7e6cbc064
+          port: no
+        input:
+          node: fed891e8-bb2c-45c9-ad51-9fade8e6f3dd
+          port: previous
+    - rid: 322813923134275955
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 876a95df-f03f-44ba-a5e4-18fe3597224f
+          port: next
+        input:
+          node: aa5bb918-2a83-48ef-8ee5-bd675e5999be
+          port: previous
+    - rid: 322813923134275956
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: aa5bb918-2a83-48ef-8ee5-bd675e5999be
+          port: next
+        input:
+          node: 5b5ca43b-0829-48fe-83d5-d4e134c524f4
+          port: previous
+    - rid: 322813923134275957
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 5b5ca43b-0829-48fe-83d5-d4e134c524f4
+          port: yes
+        input:
+          node: ee1098cd-d500-45b6-a7fa-bd9e0e117e89
+          port: previous
+    - rid: 322813923134275958
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 5b5ca43b-0829-48fe-83d5-d4e134c524f4
+          port: no
+        input:
+          node: 10e972c8-b8c2-4a9b-8751-4092b1031b6b
+          port: previous
+    - rid: 322813923134275959
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: ee1098cd-d500-45b6-a7fa-bd9e0e117e89
+          port: yes
+        input:
+          node: 10e972c8-b8c2-4a9b-8751-4092b1031b6b
+          port: previous
+    - rid: 322813923134275960
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 10e972c8-b8c2-4a9b-8751-4092b1031b6b
+          port: yes
+        input:
+          node: ee1098cd-d500-45b6-a7fa-bd9e0e117e89
+          port: previous
