@@ -23,52 +23,57 @@ MonoBehaviour:
       height: 40
     name: Start
   nodes:
-  - rid: 322813905518199480
-  - rid: 322813905518199481
-  - rid: 322813905518199482
-  - rid: 322813905518199483
-  - rid: 322813905518199484
-  - rid: 322813905518199485
-  - rid: 322813905518199486
-  - rid: 322813905518199487
-  - rid: 322813905518199488
-  - rid: 322813905518199489
-  - rid: 322813905518199490
-  - rid: 322813905518199491
-  - rid: 322813905518199492
+  - rid: 4124955915636179209
+  - rid: 4124955915636179210
+  - rid: 4124955915636179211
+  - rid: 4124955915636179212
+  - rid: 4124955915636179213
+  - rid: 4124955915636179214
+  - rid: 4124955915636179215
+  - rid: 4124955915636179216
+  - rid: 4124955915636179217
+  - rid: 4124955915636179218
+  - rid: 4124955915636179219
+  - rid: 4124955915636179220
+  - rid: 4124955915636179221
+  - rid: 4124955915636179222
   edges:
-  - rid: 322813905518199493
-  - rid: 322813905518199494
-  - rid: 322813905518199495
-  - rid: 322813905518199496
-  - rid: 322813905518199497
-  - rid: 322813905518199498
-  - rid: 322813905518199499
-  - rid: 322813905518199500
-  - rid: 322813905518199501
-  - rid: 322813905518199502
-  - rid: 322813905518199503
-  - rid: 322813905518199504
-  - rid: 322813905518199505
-  - rid: 322813905518199506
-  - rid: 322813905518199507
-  - rid: 322813905518199508
-  - rid: 322813905518199509
-  - rid: 322813905518199510
-  - rid: 322813905518199511
-  - rid: 322813905518199512
-  - rid: 322813905518199513
-  - rid: 322813905518199514
-  - rid: 322813905518199515
+  - rid: 4124955915636179223
+  - rid: 4124955915636179224
+  - rid: 4124955915636179225
+  - rid: 4124955915636179226
+  - rid: 4124955915636179227
+  - rid: 4124955915636179228
+  - rid: 4124955915636179229
+  - rid: 4124955915636179230
+  - rid: 4124955915636179231
+  - rid: 4124955915636179232
+  - rid: 4124955915636179233
+  - rid: 4124955915636179234
+  - rid: 4124955915636179235
+  - rid: 4124955915636179236
+  - rid: 4124955915636179237
+  - rid: 4124955915636179238
+  - rid: 4124955915636179239
+  - rid: 4124955915636179240
+  - rid: 4124955915636179241
+  - rid: 4124955915636179242
+  - rid: 4124955915636179243
+  - rid: 4124955915636179244
+  - rid: 4124955915636179245
+  - rid: 4124955915636179246
+  - rid: 4124955915636179247
+  - rid: 4124955915636179248
   properties:
-  - rid: 322813905518199516
+  - rid: 4124955915636179249
+  - rid: 4124955915636179250
   stickyNotes:
-  - rid: 322813905518199517
+  - rid: 4124955915636179251
   groups: []
   references:
     version: 2
     RefIds:
-    - rid: 322813905518199480
+    - rid: 4124955915636179209
       type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: 85049088-97ee-4e7e-80b7-0ad1e48ede9f
@@ -84,7 +89,7 @@ MonoBehaviour:
         message: Well met traveler, I am Alfred an upcoming paladin with a mission
           to keep these lands protected at all costs from evil. I can lead the way
           and light our path in the darkest of caves.
-    - rid: 322813905518199481
+    - rid: 4124955915636179210
       type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: c9418f6e-8eb7-44cb-8c75-4f4048d7684d
@@ -112,7 +117,7 @@ MonoBehaviour:
         - guid: 272cafe3-4e6c-4120-9dad-9b4b8054c971
           label: "I have a feeling you\u2019d be going straight for my alcohol instead
             of being a focused paladin."
-    - rid: 322813905518199482
+    - rid: 4124955915636179211
       type: {class: PropertyNode, ns: Conversa.Runtime.Nodes.PropertyNodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: f9b7088b-f259-40ef-84b4-d817cd31bf72
@@ -124,7 +129,7 @@ MonoBehaviour:
           height: 40
         propertyGuid: cfe08d37-000a-406d-8c9f-45bb4aca6600
         propertyName: isDrunk
-    - rid: 322813905518199483
+    - rid: 4124955915636179212
       type: {class: ConditionalNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: f75cc102-b7ef-4405-b329-806decbd0149
@@ -134,7 +139,7 @@ MonoBehaviour:
           y: 281
           width: 152
           height: 101
-    - rid: 322813905518199484
+    - rid: 4124955915636179213
       type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: a5a72a0c-e658-4b9a-b018-3c8a82816646
@@ -157,7 +162,7 @@ MonoBehaviour:
         - guid: no
           label: "That\u2019s neat but I don\u2019t think I\u2019ll have a need for
             your services unfortunately, thank you and good luck."
-    - rid: 322813905518199485
+    - rid: 4124955915636179214
       type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: 8924c22e-96d1-457f-9954-765c0621e07a
@@ -185,7 +190,7 @@ MonoBehaviour:
         - guid: 9cac4b56-b293-4036-b8cc-ef9708a5cca0
           label: " I\u2019m pretty sure I can wrestle those so-called evil creatures
             with my best arm tied behind my back!"
-    - rid: 322813905518199486
+    - rid: 4124955915636179215
       type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: a57d4516-b229-4301-8196-9ff7ee546e31
@@ -210,7 +215,7 @@ MonoBehaviour:
         - guid: 4490d6b1-f74e-48c5-ab7f-8fc489067c44
           label: " I\u2019m pretty sure I can wrestle those so-called evil creatures
             with my best arm tied behind my back!"
-    - rid: 322813905518199487
+    - rid: 4124955915636179216
       type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: 9e60a528-3dea-431d-9548-898339c55282
@@ -232,7 +237,7 @@ MonoBehaviour:
         - guid: no
           label: "Thanks for the info, unfortunately I don\u2019t think your skills
             will help with my ongoing adventures. "
-    - rid: 322813905518199488
+    - rid: 4124955915636179217
       type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: a2430500-d58a-45a8-9026-5175284d4318
@@ -248,7 +253,7 @@ MonoBehaviour:
         message: 'o be it, good luck on your adventures traveler.
 
 '
-    - rid: 322813905518199489
+    - rid: 4124955915636179218
       type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: bc65248c-f5dc-4b67-8db7-76ae3d2b6396
@@ -262,7 +267,7 @@ MonoBehaviour:
         actorProfile: {fileID: 11400000, guid: ab15ab786b34c16499f467dc57ceba9a, type: 2}
         useActorProfile: 1
         message: "You have no idea what you\u2019re talking about, good day.\r\n"
-    - rid: 322813905518199490
+    - rid: 4124955915636179219
       type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: a5abfff1-ad7a-401f-a4da-69d955314101
@@ -282,7 +287,7 @@ MonoBehaviour:
           label: Yes
         - guid: no
           label: No
-    - rid: 322813905518199491
+    - rid: 4124955915636179220
       type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: f1901392-3ebe-4644-8b27-5a7019e460f8
@@ -301,7 +306,7 @@ MonoBehaviour:
           label: Yes
         - guid: no
           label: No
-    - rid: 322813905518199492
+    - rid: 4124955915636179221
       type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: fa0257b8-e05c-4fce-9abd-67b29dd179a5
@@ -321,7 +326,20 @@ MonoBehaviour:
           label: Yes
         - guid: no
           label: No
-    - rid: 322813905518199493
+    - rid: 4124955915636179222
+      type: {class: EventNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 9b320e41-71d6-448d-9c35-9e0ca3cd1c12
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 1880
+          y: -174.66667
+          width: 185.99988
+          height: 103.333336
+        stopsFlow: 0
+        eventGuid: bb14e17a-88c1-4ecb-878b-a2585e5e8623
+        eventName: TeamUP
+    - rid: 4124955915636179223
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -330,7 +348,7 @@ MonoBehaviour:
         input:
           node: 85049088-97ee-4e7e-80b7-0ad1e48ede9f
           port: previous
-    - rid: 322813905518199494
+    - rid: 4124955915636179224
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -339,7 +357,7 @@ MonoBehaviour:
         input:
           node: f75cc102-b7ef-4405-b329-806decbd0149
           port: condition
-    - rid: 322813905518199495
+    - rid: 4124955915636179225
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -348,7 +366,7 @@ MonoBehaviour:
         input:
           node: c9418f6e-8eb7-44cb-8c75-4f4048d7684d
           port: previous
-    - rid: 322813905518199496
+    - rid: 4124955915636179226
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -357,7 +375,7 @@ MonoBehaviour:
         input:
           node: f75cc102-b7ef-4405-b329-806decbd0149
           port: previous
-    - rid: 322813905518199497
+    - rid: 4124955915636179227
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -366,7 +384,7 @@ MonoBehaviour:
         input:
           node: a5a72a0c-e658-4b9a-b018-3c8a82816646
           port: previous
-    - rid: 322813905518199498
+    - rid: 4124955915636179228
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -375,7 +393,7 @@ MonoBehaviour:
         input:
           node: 8924c22e-96d1-457f-9954-765c0621e07a
           port: previous
-    - rid: 322813905518199499
+    - rid: 4124955915636179229
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -384,7 +402,7 @@ MonoBehaviour:
         input:
           node: a57d4516-b229-4301-8196-9ff7ee546e31
           port: previous
-    - rid: 322813905518199500
+    - rid: 4124955915636179230
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -393,7 +411,7 @@ MonoBehaviour:
         input:
           node: 9e60a528-3dea-431d-9548-898339c55282
           port: previous
-    - rid: 322813905518199501
+    - rid: 4124955915636179231
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -402,7 +420,7 @@ MonoBehaviour:
         input:
           node: a2430500-d58a-45a8-9026-5175284d4318
           port: previous
-    - rid: 322813905518199502
+    - rid: 4124955915636179232
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -411,7 +429,7 @@ MonoBehaviour:
         input:
           node: a2430500-d58a-45a8-9026-5175284d4318
           port: previous
-    - rid: 322813905518199503
+    - rid: 4124955915636179233
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -420,7 +438,7 @@ MonoBehaviour:
         input:
           node: bc65248c-f5dc-4b67-8db7-76ae3d2b6396
           port: previous
-    - rid: 322813905518199504
+    - rid: 4124955915636179234
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -429,7 +447,7 @@ MonoBehaviour:
         input:
           node: bc65248c-f5dc-4b67-8db7-76ae3d2b6396
           port: previous
-    - rid: 322813905518199505
+    - rid: 4124955915636179235
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -438,7 +456,7 @@ MonoBehaviour:
         input:
           node: bc65248c-f5dc-4b67-8db7-76ae3d2b6396
           port: previous
-    - rid: 322813905518199506
+    - rid: 4124955915636179236
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -447,7 +465,7 @@ MonoBehaviour:
         input:
           node: a2430500-d58a-45a8-9026-5175284d4318
           port: previous
-    - rid: 322813905518199507
+    - rid: 4124955915636179237
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -456,7 +474,7 @@ MonoBehaviour:
         input:
           node: a2430500-d58a-45a8-9026-5175284d4318
           port: previous
-    - rid: 322813905518199508
+    - rid: 4124955915636179238
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -465,7 +483,7 @@ MonoBehaviour:
         input:
           node: a5abfff1-ad7a-401f-a4da-69d955314101
           port: previous
-    - rid: 322813905518199509
+    - rid: 4124955915636179239
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -474,7 +492,7 @@ MonoBehaviour:
         input:
           node: a2430500-d58a-45a8-9026-5175284d4318
           port: previous
-    - rid: 322813905518199510
+    - rid: 4124955915636179240
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -483,7 +501,7 @@ MonoBehaviour:
         input:
           node: a5abfff1-ad7a-401f-a4da-69d955314101
           port: previous
-    - rid: 322813905518199511
+    - rid: 4124955915636179241
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -492,7 +510,7 @@ MonoBehaviour:
         input:
           node: f1901392-3ebe-4644-8b27-5a7019e460f8
           port: previous
-    - rid: 322813905518199512
+    - rid: 4124955915636179242
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -501,7 +519,7 @@ MonoBehaviour:
         input:
           node: f1901392-3ebe-4644-8b27-5a7019e460f8
           port: previous
-    - rid: 322813905518199513
+    - rid: 4124955915636179243
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -510,7 +528,7 @@ MonoBehaviour:
         input:
           node: a2430500-d58a-45a8-9026-5175284d4318
           port: previous
-    - rid: 322813905518199514
+    - rid: 4124955915636179244
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -519,7 +537,7 @@ MonoBehaviour:
         input:
           node: fa0257b8-e05c-4fce-9abd-67b29dd179a5
           port: previous
-    - rid: 322813905518199515
+    - rid: 4124955915636179245
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -528,14 +546,46 @@ MonoBehaviour:
         input:
           node: a2430500-d58a-45a8-9026-5175284d4318
           port: previous
-    - rid: 322813905518199516
+    - rid: 4124955915636179246
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: a5abfff1-ad7a-401f-a4da-69d955314101
+          port: yes
+        input:
+          node: 9b320e41-71d6-448d-9c35-9e0ca3cd1c12
+          port: previous
+    - rid: 4124955915636179247
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: f1901392-3ebe-4644-8b27-5a7019e460f8
+          port: yes
+        input:
+          node: 9b320e41-71d6-448d-9c35-9e0ca3cd1c12
+          port: previous
+    - rid: 4124955915636179248
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: fa0257b8-e05c-4fce-9abd-67b29dd179a5
+          port: yes
+        input:
+          node: 9b320e41-71d6-448d-9c35-9e0ca3cd1c12
+          port: previous
+    - rid: 4124955915636179249
       type: {class: BooleanProperty, ns: Conversa.Runtime.Properties, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: cfe08d37-000a-406d-8c9f-45bb4aca6600
         name: isDrunk
         value: 0
         initialValue: 0
-    - rid: 322813905518199517
+    - rid: 4124955915636179250
+      type: {class: EventProperty, ns: Conversa.Runtime.Properties, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: bb14e17a-88c1-4ecb-878b-a2585e5e8623
+        name: TeamUP
+    - rid: 4124955915636179251
       type: {class: StickyNoteData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         guid: f51bcdc5-db61-4d0d-a1a2-cace6e06c88a
