@@ -23,32 +23,35 @@ MonoBehaviour:
       height: 100
     name: Start
   nodes:
-  - rid: 4124955893895004304
-  - rid: 4124955893895004305
-  - rid: 4124955893895004306
-  - rid: 4124955893895004307
-  - rid: 4124955893895004308
-  - rid: 4124955893895004309
-  - rid: 4124955893895004310
-  - rid: 4124955893895004311
+  - rid: 4124955915636178991
+  - rid: 4124955915636178992
+  - rid: 4124955915636178993
+  - rid: 4124955915636178994
+  - rid: 4124955915636178995
+  - rid: 4124955915636178996
+  - rid: 4124955915636178997
+  - rid: 4124955915636178998
+  - rid: 4124955915636178999
   edges:
-  - rid: 4124955893895004312
-  - rid: 4124955893895004313
-  - rid: 4124955893895004314
-  - rid: 4124955893895004315
-  - rid: 4124955893895004316
-  - rid: 4124955893895004317
-  - rid: 4124955893895004318
-  - rid: 4124955893895004319
-  - rid: 4124955893895004320
-  - rid: 4124955893895004321
-  properties: []
+  - rid: 4124955915636179000
+  - rid: 4124955915636179001
+  - rid: 4124955915636179002
+  - rid: 4124955915636179003
+  - rid: 4124955915636179004
+  - rid: 4124955915636179005
+  - rid: 4124955915636179006
+  - rid: 4124955915636179007
+  - rid: 4124955915636179008
+  - rid: 4124955915636179009
+  - rid: 4124955915636179010
+  properties:
+  - rid: 4124955915636179011
   stickyNotes: []
   groups: []
   references:
     version: 2
     RefIds:
-    - rid: 4124955893895004304
+    - rid: 4124955915636178991
       type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: f8430759-4b48-4122-b370-49f4d1d060b4
@@ -62,7 +65,7 @@ MonoBehaviour:
         actorProfile: {fileID: 11400000, guid: 9421982d29282b446b77f04bbe9de4a1, type: 2}
         useActorProfile: 1
         message: Hello, welcome
-    - rid: 4124955893895004305
+    - rid: 4124955915636178992
       type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: 730d09d4-2724-4a07-af37-f25e8ba4ac6e
@@ -76,7 +79,7 @@ MonoBehaviour:
         actorProfile: {fileID: 11400000, guid: 00498dacb9df50c4d9f1a09625fcbc5b, type: 2}
         useActorProfile: 1
         message: Hi, I am Player
-    - rid: 4124955893895004306
+    - rid: 4124955915636178993
       type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: 75f9ddbe-b5e3-4413-bb7b-c6f519789321
@@ -90,7 +93,7 @@ MonoBehaviour:
         actorProfile: {fileID: 11400000, guid: 9421982d29282b446b77f04bbe9de4a1, type: 2}
         useActorProfile: 1
         message: I am testNPC
-    - rid: 4124955893895004307
+    - rid: 4124955915636178994
       type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: b43d6179-1bf0-453f-a3aa-5c3587014fa5
@@ -111,7 +114,7 @@ MonoBehaviour:
           label: No
         - guid: 8dd40de8-201d-44d0-9bdd-06a5cbc8ba80
           label: Why would I want a fight?
-    - rid: 4124955893895004308
+    - rid: 4124955915636178995
       type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: fdda4109-ce1b-47a2-9c2b-70954b47322a
@@ -125,7 +128,7 @@ MonoBehaviour:
         actorProfile: {fileID: 11400000, guid: 9421982d29282b446b77f04bbe9de4a1, type: 2}
         useActorProfile: 1
         message: Okay, Lets fight
-    - rid: 4124955893895004309
+    - rid: 4124955915636178996
       type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: c0d32de7-9933-4bf6-ac88-39a7f1b5eb29
@@ -139,7 +142,7 @@ MonoBehaviour:
         actorProfile: {fileID: 11400000, guid: 9421982d29282b446b77f04bbe9de4a1, type: 2}
         useActorProfile: 1
         message: coward
-    - rid: 4124955893895004310
+    - rid: 4124955915636178997
       type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: 2d200f55-c563-4f3d-a167-3cdf0f4707ac
@@ -153,7 +156,7 @@ MonoBehaviour:
         actorProfile: {fileID: 11400000, guid: 9421982d29282b446b77f04bbe9de4a1, type: 2}
         useActorProfile: 1
         message: Emmm, I dont know, I just want to fight
-    - rid: 4124955893895004311
+    - rid: 4124955915636178998
       type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: 572831e9-2805-4297-97b2-ed94ccf5660f
@@ -169,7 +172,20 @@ MonoBehaviour:
         message: 'wtf
 
 '
-    - rid: 4124955893895004312
+    - rid: 4124955915636178999
+      type: {class: EventNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: c33192b3-9486-4cde-9836-35d1f75aa26f
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 1525.3333
+          y: 309.3333
+          width: 186
+          height: 103.33334
+        stopsFlow: 0
+        eventGuid: f8d49773-782b-496c-9be4-2f870a941e63
+        eventName: TeamUp
+    - rid: 4124955915636179000
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -178,7 +194,7 @@ MonoBehaviour:
         input:
           node: f8430759-4b48-4122-b370-49f4d1d060b4
           port: previous
-    - rid: 4124955893895004313
+    - rid: 4124955915636179001
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -187,7 +203,7 @@ MonoBehaviour:
         input:
           node: 730d09d4-2724-4a07-af37-f25e8ba4ac6e
           port: previous
-    - rid: 4124955893895004314
+    - rid: 4124955915636179002
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -196,7 +212,7 @@ MonoBehaviour:
         input:
           node: 75f9ddbe-b5e3-4413-bb7b-c6f519789321
           port: previous
-    - rid: 4124955893895004315
+    - rid: 4124955915636179003
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -205,7 +221,7 @@ MonoBehaviour:
         input:
           node: b43d6179-1bf0-453f-a3aa-5c3587014fa5
           port: previous
-    - rid: 4124955893895004316
+    - rid: 4124955915636179004
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -214,7 +230,7 @@ MonoBehaviour:
         input:
           node: fdda4109-ce1b-47a2-9c2b-70954b47322a
           port: previous
-    - rid: 4124955893895004317
+    - rid: 4124955915636179005
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -223,7 +239,7 @@ MonoBehaviour:
         input:
           node: c0d32de7-9933-4bf6-ac88-39a7f1b5eb29
           port: previous
-    - rid: 4124955893895004318
+    - rid: 4124955915636179006
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -232,7 +248,7 @@ MonoBehaviour:
         input:
           node: 2d200f55-c563-4f3d-a167-3cdf0f4707ac
           port: previous
-    - rid: 4124955893895004319
+    - rid: 4124955915636179007
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -241,7 +257,7 @@ MonoBehaviour:
         input:
           node: 572831e9-2805-4297-97b2-ed94ccf5660f
           port: previous
-    - rid: 4124955893895004320
+    - rid: 4124955915636179008
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -250,7 +266,7 @@ MonoBehaviour:
         input:
           node: 572831e9-2805-4297-97b2-ed94ccf5660f
           port: previous
-    - rid: 4124955893895004321
+    - rid: 4124955915636179009
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
@@ -259,3 +275,17 @@ MonoBehaviour:
         input:
           node: 572831e9-2805-4297-97b2-ed94ccf5660f
           port: previous
+    - rid: 4124955915636179010
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 572831e9-2805-4297-97b2-ed94ccf5660f
+          port: next
+        input:
+          node: c33192b3-9486-4cde-9836-35d1f75aa26f
+          port: previous
+    - rid: 4124955915636179011
+      type: {class: EventProperty, ns: Conversa.Runtime.Properties, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: f8d49773-782b-496c-9be4-2f870a941e63
+        name: TeamUp
