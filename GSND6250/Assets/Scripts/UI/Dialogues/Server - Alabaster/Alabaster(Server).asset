@@ -1,0 +1,320 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e373d802544f3b90f235c7efebe5e1, type: 3}
+  m_Name: Alabaster(Server)
+  m_EditorClassIdentifier: 
+  version: 1.0
+  startNode:
+    <Guid>k__BackingField: 034aed59-5f07-428a-a8f7-d1038df9bde0
+    <NodeRect>k__BackingField:
+      serializedVersion: 2
+      x: 100
+      y: 100
+      width: 100
+      height: 100
+    name: Start
+  nodes:
+  - rid: 322813905518199555
+  - rid: 322813905518199556
+  - rid: 322813905518199557
+  - rid: 322813905518199558
+  - rid: 322813905518199559
+  - rid: 322813905518199560
+  - rid: 322813905518199561
+  edges:
+  - rid: 322813905518199562
+  - rid: 322813905518199563
+  - rid: 322813905518199564
+  - rid: 322813905518199565
+  - rid: 322813905518199566
+  - rid: 322813905518199567
+  - rid: 322813905518199568
+  - rid: 322813905518199569
+  - rid: 322813905518199570
+  - rid: 322813905518199571
+  - rid: 322813905518199572
+  - rid: 322813905518199573
+  - rid: 322813905518199574
+  - rid: 322813905518199575
+  - rid: 322813905518199576
+  properties: []
+  stickyNotes: []
+  groups: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 322813905518199555
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 098087a3-854f-42ed-bced-ff6d52eca974
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 1912
+          y: 227
+          width: 208
+          height: 177
+        actor: Actor name
+        actorProfile: {fileID: 11400000, guid: c1a7a5ffbc624dc49a632c042cd4e5d8, type: 2}
+        useActorProfile: 1
+        message: "Hello hello Traveler, Welcome to Lord Barney\u2019s Tavern, if
+          you need help let me know.\n"
+    - rid: 322813905518199556
+      type: {class: BookmarkNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: d3fa7838-c610-4485-bd18-3d8f8239870a
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 1730.0568
+          y: 294.89603
+          width: NaN
+          height: NaN
+        name: Start
+    - rid: 322813905518199557
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: bbfd7cbb-00d2-4642-8672-a4eb01b57ce5
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 2150
+          y: 227
+          width: 208
+          height: 245
+        actor: 
+        actorProfile: {fileID: 11400000, guid: c1a7a5ffbc624dc49a632c042cd4e5d8, type: 2}
+        useActorProfile: 1
+        message: "Hello hello Traveler, Welcome to Lord Barney\u2019s Tavern, if
+          you need help let me know."
+        options:
+        - guid: yes
+          label: Where can I get a beer?
+        - guid: no
+          label: What can I do here?
+        - guid: 911c3ccb-afd3-417d-ae18-567091da47f5
+          label: How do I leave?
+        - guid: c99036f4-ea1e-4f4b-adf4-9260e9ad2d68
+          label: I am indeed good, thank you for your help
+    - rid: 322813905518199558
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: cf1702de-edc4-45a5-b124-7d5c287621ec
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 2432
+          y: 98
+          width: 208
+          height: 197
+        actor: 
+        actorProfile: {fileID: 11400000, guid: c1a7a5ffbc624dc49a632c042cd4e5d8, type: 2}
+        useActorProfile: 1
+        message: You can get the beer near the owner, he is the one who serves the
+          brew in this tavern. Any other questions?
+        options:
+        - guid: no
+          label: What can I do here?
+        - guid: 6bbb29c1-ace9-4e60-bd3c-1f9c584ffb23
+          label: How do I leave?
+        - guid: 8586ec39-833c-4c5a-82c3-06508db14b2b
+          label: I am indeed good, thank you for your help
+    - rid: 322813905518199559
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 57e11c83-ea8d-4ce8-9a25-4a975f983c65
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 2684
+          y: 275
+          width: 208
+          height: 197
+        actor: 
+        actorProfile: {fileID: 11400000, guid: c1a7a5ffbc624dc49a632c042cd4e5d8, type: 2}
+        useActorProfile: 1
+        message: 'You can meet other travelers starting their own adventures , you
+          can mingle and perhaps make them join your team. Any other questions? '
+        options:
+        - guid: yes
+          label: Where can I get a beer?
+        - guid: 980be036-6bf7-4bb1-8c1e-ef178dcbf3d5
+          label: How do I leave?
+        - guid: 2e24e205-b3fa-45bb-b095-c0375ce51b2a
+          label: I am indeed good, thank you for your help
+    - rid: 322813905518199560
+      type: {class: ChoiceNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: e9004283-66f4-4e6b-9251-68b03688338b
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 2684
+          y: 544
+          width: 208
+          height: 197
+        actor: 
+        actorProfile: {fileID: 11400000, guid: c1a7a5ffbc624dc49a632c042cd4e5d8, type: 2}
+        useActorProfile: 1
+        message: 'You can leave by going to the left corner of the bar and talking
+          to the big Guard Reginald. Any other questions? '
+        options:
+        - guid: yes
+          label: Where can I get a beer?
+        - guid: no
+          label: What can I do here?
+        - guid: f68359c2-0714-4d4b-be65-9b5681e47056
+          label: I am indeed good, thank you for your help
+    - rid: 322813905518199561
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 771f51c8-19b4-445c-84c5-3a294d75f616
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 2432
+          y: 834
+          width: 208
+          height: 206
+        actor: Actor name
+        actorProfile: {fileID: 11400000, guid: c1a7a5ffbc624dc49a632c042cd4e5d8, type: 2}
+        useActorProfile: 1
+        message: "I am ready to answer your questions any time traveler! Make sure
+          to enjoy your stay and meet new travelers at Lord Barney\u2019s Tavern!\r\n"
+    - rid: 322813905518199562
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: d3fa7838-c610-4485-bd18-3d8f8239870a
+          port: next
+        input:
+          node: 098087a3-854f-42ed-bced-ff6d52eca974
+          port: previous
+    - rid: 322813905518199563
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 098087a3-854f-42ed-bced-ff6d52eca974
+          port: next
+        input:
+          node: bbfd7cbb-00d2-4642-8672-a4eb01b57ce5
+          port: previous
+    - rid: 322813905518199564
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: bbfd7cbb-00d2-4642-8672-a4eb01b57ce5
+          port: yes
+        input:
+          node: cf1702de-edc4-45a5-b124-7d5c287621ec
+          port: previous
+    - rid: 322813905518199565
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 57e11c83-ea8d-4ce8-9a25-4a975f983c65
+          port: yes
+        input:
+          node: cf1702de-edc4-45a5-b124-7d5c287621ec
+          port: previous
+    - rid: 322813905518199566
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: e9004283-66f4-4e6b-9251-68b03688338b
+          port: yes
+        input:
+          node: cf1702de-edc4-45a5-b124-7d5c287621ec
+          port: previous
+    - rid: 322813905518199567
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: e9004283-66f4-4e6b-9251-68b03688338b
+          port: f68359c2-0714-4d4b-be65-9b5681e47056
+        input:
+          node: 771f51c8-19b4-445c-84c5-3a294d75f616
+          port: previous
+    - rid: 322813905518199568
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 57e11c83-ea8d-4ce8-9a25-4a975f983c65
+          port: 2e24e205-b3fa-45bb-b095-c0375ce51b2a
+        input:
+          node: 771f51c8-19b4-445c-84c5-3a294d75f616
+          port: previous
+    - rid: 322813905518199569
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: bbfd7cbb-00d2-4642-8672-a4eb01b57ce5
+          port: 911c3ccb-afd3-417d-ae18-567091da47f5
+        input:
+          node: e9004283-66f4-4e6b-9251-68b03688338b
+          port: previous
+    - rid: 322813905518199570
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: bbfd7cbb-00d2-4642-8672-a4eb01b57ce5
+          port: c99036f4-ea1e-4f4b-adf4-9260e9ad2d68
+        input:
+          node: 771f51c8-19b4-445c-84c5-3a294d75f616
+          port: previous
+    - rid: 322813905518199571
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: cf1702de-edc4-45a5-b124-7d5c287621ec
+          port: 8586ec39-833c-4c5a-82c3-06508db14b2b
+        input:
+          node: 771f51c8-19b4-445c-84c5-3a294d75f616
+          port: previous
+    - rid: 322813905518199572
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 57e11c83-ea8d-4ce8-9a25-4a975f983c65
+          port: 980be036-6bf7-4bb1-8c1e-ef178dcbf3d5
+        input:
+          node: e9004283-66f4-4e6b-9251-68b03688338b
+          port: previous
+    - rid: 322813905518199573
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: cf1702de-edc4-45a5-b124-7d5c287621ec
+          port: 6bbb29c1-ace9-4e60-bd3c-1f9c584ffb23
+        input:
+          node: e9004283-66f4-4e6b-9251-68b03688338b
+          port: previous
+    - rid: 322813905518199574
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: e9004283-66f4-4e6b-9251-68b03688338b
+          port: no
+        input:
+          node: 57e11c83-ea8d-4ce8-9a25-4a975f983c65
+          port: previous
+    - rid: 322813905518199575
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: cf1702de-edc4-45a5-b124-7d5c287621ec
+          port: no
+        input:
+          node: 57e11c83-ea8d-4ce8-9a25-4a975f983c65
+          port: previous
+    - rid: 322813905518199576
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: bbfd7cbb-00d2-4642-8672-a4eb01b57ce5
+          port: no
+        input:
+          node: 57e11c83-ea8d-4ce8-9a25-4a975f983c65
+          port: previous
