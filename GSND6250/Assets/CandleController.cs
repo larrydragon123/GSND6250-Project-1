@@ -8,7 +8,14 @@ public class CandleController : MonoBehaviour
     public ThunderController thunderController;
     public int currentCandle = 0;
 
+
     public GameObject door;
+    public GameObject skeleton;
+    public GameObject skeletonPos;
+
+    public AudioSource audioSource;
+
+    private bool isPlayed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,13 +33,11 @@ public class CandleController : MonoBehaviour
 
     IEnumerator LightNextCandleCoroutine(){
         candles[currentCandle].GetComponent<SphereCollider>().enabled = false;
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(5f);
         candles[currentCandle].GetComponentInChildren<Light>().enabled = false;
         candles[currentCandle].GetComponentInChildren<ParticleSystem>().Stop();
-        if(currentCandle <= candles.Count - 1){
+        if(currentCandle < candles.Count - 1){
             currentCandle++;
-        }else{
-            door.GetComponent<MeshCollider>().enabled = false;
         }
         candles[currentCandle].GetComponentInChildren<Light>().enabled = true;
         candles[currentCandle].GetComponent<SphereCollider>().enabled = true;
@@ -42,6 +47,12 @@ public class CandleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(currentCandle == candles.Count - 1 && !isPlayed){
+            isPlayed = true;
+            audioSource.Play();
+            door.GetComponent<MeshCollider>().enabled = false;
+            skeleton.transform.position = skeletonPos.transform.position;
+            skeleton.transform.rotation = new Quaternion(0, 0, 0, 0);
+        }
     }
 }
