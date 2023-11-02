@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5704024722050648273}
   - component: {fileID: 6435062036160871722}
   - component: {fileID: 6947435614569146194}
+  - component: {fileID: 5651848395584095385}
   m_Layer: 0
   m_Name: FirePlace
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5651848395584095385
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026299378931488295}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3369316746193770658, guid: 3bee827e12a29e6419dff54d7212c44e, type: 3}
