@@ -7,6 +7,8 @@ public class CandleController : MonoBehaviour
     public List<GameObject> candles;
     public ThunderController thunderController;
     public int currentCandle = 0;
+
+    public GameObject door;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,8 @@ public class CandleController : MonoBehaviour
         candles[currentCandle].GetComponentInChildren<ParticleSystem>().Stop();
         if(currentCandle <= candles.Count - 1){
             currentCandle++;
+        }else{
+            door.GetComponent<MeshCollider>().enabled = false;
         }
         candles[currentCandle].GetComponentInChildren<Light>().enabled = true;
         candles[currentCandle].GetComponent<SphereCollider>().enabled = true;
