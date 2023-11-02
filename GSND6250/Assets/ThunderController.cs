@@ -10,7 +10,7 @@ public class ThunderController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        ThunderOneShot();
     }
 
     // Update is called once per frame
