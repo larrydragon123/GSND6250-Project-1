@@ -49,7 +49,7 @@ public class PickUp : MonoBehaviour
                 //     //make sure pickup tag is attached
                 //     if (hit.transform.gameObject.CompareTag("PickUp"))
                 //     {
-                        
+
                 //         //pass in object hit into the PickUpObject function
                 //         PickUpObject(hit.transform.gameObject);
                 //     }
@@ -57,7 +57,7 @@ public class PickUp : MonoBehaviour
             }
             else
             {
-                if(canDrop == true)
+                if (canDrop == true)
                 {
                     StopClipping(); //prevents object from clipping through walls
                     DropObject();
@@ -85,6 +85,10 @@ public class PickUp : MonoBehaviour
             heldObjRb.isKinematic = true;
             heldObjRb.transform.parent = holdPos.transform; //parent object to holdposition
             heldObj.layer = HoldLayer; //change the object layer to the holdLayer
+            foreach (Transform child in heldObj.transform)
+            {
+                child.gameObject.layer = HoldLayer;
+            }
             //make sure object doesnt collide with player, it can cause weird bugs
             Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), player.GetComponent<Collider>(), true);
         }
@@ -94,6 +98,10 @@ public class PickUp : MonoBehaviour
         //re-enable collision with player
         Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), player.GetComponent<Collider>(), false);
         heldObj.layer = PickUpLayer; //object assigned back to default layer
+        foreach (Transform child in heldObj.transform)
+        {
+            child.gameObject.layer = PickUpLayer;
+        }
         heldObjRb.isKinematic = false;
         heldObj.transform.parent = null; //unparent object
         heldObj = null; //undefine game object
@@ -132,6 +140,11 @@ public class PickUp : MonoBehaviour
         //same as drop function, but add force to object before undefining it
         Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), player.GetComponent<Collider>(), false);
         heldObj.layer = PickUpLayer;
+        //and its all child 
+        foreach (Transform child in heldObj.transform)
+        {
+            child.gameObject.layer = PickUpLayer;
+        }
         heldObjRb.isKinematic = false;
         heldObj.transform.parent = null;
         heldObjRb.AddForce(transform.forward * throwForce);

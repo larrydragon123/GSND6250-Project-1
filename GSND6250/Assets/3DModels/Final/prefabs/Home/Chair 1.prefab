@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7334221389845720739}
   - component: {fileID: 6637617535773249027}
   - component: {fileID: 4846470003475474268}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: polySurface302
-  m_TagString: Untagged
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4215074044898572212}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: transform51
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,9 +125,9 @@ GameObject:
   - component: {fileID: 6937242057775850683}
   - component: {fileID: 8587888103422136286}
   - component: {fileID: 6134022161805057557}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: polySurface301
-  m_TagString: Untagged
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -208,9 +208,9 @@ GameObject:
   - component: {fileID: 2353275645978868825}
   - component: {fileID: 4807701193605212769}
   - component: {fileID: 2968605054503824492}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: polySurface306
-  m_TagString: Untagged
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -291,9 +291,9 @@ GameObject:
   - component: {fileID: 659618347712355903}
   - component: {fileID: 788471774394410235}
   - component: {fileID: 5888110322342373789}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: polySurface300
-  m_TagString: Untagged
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -374,9 +374,9 @@ GameObject:
   - component: {fileID: 8013833525984870294}
   - component: {fileID: 795369260508923282}
   - component: {fileID: 6469375849002190794}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: polySurface303
-  m_TagString: Untagged
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -457,9 +457,9 @@ GameObject:
   - component: {fileID: 757302525662577892}
   - component: {fileID: 1341074719699969013}
   - component: {fileID: 6025246369974201547}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: polySurface305
-  m_TagString: Untagged
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -538,9 +538,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5577515850146702200}
-  m_Layer: 0
+  - component: {fileID: 712932543355939033}
+  - component: {fileID: 3566671080292895836}
+  m_Layer: 15
   m_Name: Chair 1
-  m_TagString: Untagged
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -568,6 +570,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &712932543355939033
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5056559083061688770}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 45.68621, y: 51.984604, z: 46.557793}
+  m_Center: {x: -0.83009803, y: 26.297117, z: 0.28768873}
+--- !u!54 &3566671080292895836
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5056559083061688770}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8770302421263258499
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,9 +610,9 @@ GameObject:
   - component: {fileID: 7907811716171823899}
   - component: {fileID: 5912287572910613064}
   - component: {fileID: 7590059201508290603}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: polySurface304
-  m_TagString: Untagged
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
