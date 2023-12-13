@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -8,12 +10,19 @@ public class EventController : MonoBehaviour
 {
     public Canvas dialogueCanvas;
     public GameObject textPanel;
+    public GameObject fadePanel;
+    public float fadeDuration = 1f;
     public TypeWriter typeWriter;
 
     public Volume volume;
     public Squinting squinting;
+    public GameObject player;
+
+    public GameObject GlassesStorePosition;
+    public GameObject ApartmentPosition;
 
     private bool isClosed = false;
+    private bool isFading = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +63,12 @@ public class EventController : MonoBehaviour
         StartCoroutine(UberArrive());
     }
 
+    public void FindGlasses(){
+        textPanel.SetActive(true);
+        isClosed = false;
+        typeWriter.StartTyping("Okay, gotta try on glasses to find one that fits my visual acuity");
+    }
+
     IEnumerator UberArrive(){
         yield return new WaitForSeconds(5f);
         textPanel.SetActive(true);
@@ -83,6 +98,33 @@ public class EventController : MonoBehaviour
 
     }
 
+    public void DoorToGlassesStore(){
+        Debug.Log("DoorToGlassesStore");
+        StartFade();
+        StartCoroutine(GoToGlassesStore());
+    }
+
+    IEnumerator GoToGlassesStore(){
+        yield return new WaitForSeconds(fadeDuration);
+        player.GetComponent<CharacterController>().enabled = false;
+        player.GetComponent<CharacterController>().transform.position = GlassesStorePosition.transform.position;
+        player.GetComponent<CharacterController>().enabled = true;
+        FindGlasses();
+    }
+
+    IEnumerator GoToApartment(){
+        yield return new WaitForSeconds(fadeDuration);
+        player.GetComponent<CharacterController>().enabled = false;
+        player.GetComponent<CharacterController>().transform.position = ApartmentPosition.transform.position;
+        player.GetComponent<CharacterController>().enabled = true;
+    }
+
+    public void DoorToApartment(){
+        Debug.Log("DoorToApartment");
+        StartFade();
+        StartCoroutine(GoToApartment());
+    }
+
     IEnumerator GoHome(){
         textPanel.SetActive(true);
         isClosed = false;
@@ -90,6 +132,52 @@ public class EventController : MonoBehaviour
         yield return new WaitForSeconds(3f);
         // load scene
     }
+
+    public void FadeIn(){
+        StartCoroutine(DoFade(1));
+    }
+
+    public void FadeOut(){
+        StartCoroutine(DoFade(0));
+    }
+
+    public void StartFade()
+    {
+        if (!isFading)
+        {
+            StartCoroutine(CombinedFade());
+        }
+    }
+
+    IEnumerator CombinedFade()
+    {
+        isFading = true;
+
+        // Fade In
+        yield return StartCoroutine(DoFade(1));
+
+        // Wait for a bit after fading in
+        yield return new WaitForSeconds(fadeDuration);
+
+        // Fade Out
+        yield return StartCoroutine(DoFade(0));
+
+        isFading = false;
+    }
+
+    IEnumerator DoFade(float targetAlpha)
+    {
+        CanvasGroup canvasGroup = fadePanel.GetComponent<CanvasGroup>();
+        float alpha = canvasGroup.alpha;
+
+        while (!Mathf.Approximately(alpha, targetAlpha))
+        {
+            alpha = Mathf.MoveTowards(alpha, targetAlpha, Time.deltaTime / fadeDuration);
+            canvasGroup.alpha = alpha;
+            yield return null;
+        }
+    }
+
 
     public void ResetVision(){
         volume.profile.TryGet(out LensDistortion lensDistortion);

@@ -1119,9 +1119,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2359665250256479663}
-  m_Layer: 0
+  - component: {fileID: -4461684177481097502}
+  - component: {fileID: -4856978148404399303}
+  m_Layer: 15
   m_Name: Glasses6
-  m_TagString: Untagged
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1133,9 +1135,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7179280942916003112}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.098572, y: 1.2915535, z: -3.8371506}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.3319445, y: -0.8657089, z: -6.2427135}
+  m_LocalScale: {x: 0.033938438, y: 0.033938438, z: 0.033938438}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7344750514941224758}
@@ -1159,6 +1161,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &-4461684177481097502
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7179280942916003112}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.08, y: 3.85, z: 15.52}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &-4856978148404399303
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7179280942916003112}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &7677502176133630438
 GameObject:
   m_ObjectHideFlags: 0

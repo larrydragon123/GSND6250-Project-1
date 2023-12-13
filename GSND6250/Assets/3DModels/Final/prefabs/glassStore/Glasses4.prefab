@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 3695898137162605919}
   - component: {fileID: 5441046290310415872}
   - component: {fileID: 5785731213037750265}
+  - component: {fileID: 988326772564728218}
   m_Layer: 0
   m_Name: polySurface125
   m_TagString: Untagged
@@ -332,6 +333,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &988326772564728218
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2564589853983762364}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.0679119, y: 1.0191741, z: 0.45749202}
+  m_Center: {x: 0.00000011920928, y: 0.011873781, z: -0.111402415}
 --- !u!1 &4052818107719118056
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,9 +355,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5965758642061976930}
-  m_Layer: 0
+  - component: {fileID: 3518017149444469538}
+  - component: {fileID: 1699482554254966398}
+  m_Layer: 15
   m_Name: Glasses4
-  m_TagString: Untagged
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -355,9 +371,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4052818107719118056}
-  m_LocalRotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.8191007, y: 1.2858496, z: -3.754262}
-  m_LocalScale: {x: 0.045421842, y: 0.045421842, z: 0.045421842}
+  m_LocalRotation: {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.7040128, y: -0.31509942, z: -5.8692193}
+  m_LocalScale: {x: 0.16340122, y: 0.16340122, z: 0.16340122}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1866036507925618808}
@@ -375,6 +391,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3518017149444469538
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4052818107719118056}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.28, y: 0.9, z: 2.64}
+  m_Center: {x: 1.3, y: 0.05, z: -1.52}
+--- !u!54 &1699482554254966398
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4052818107719118056}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &5425125748903904413
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,6 +514,7 @@ GameObject:
   - component: {fileID: 8351464552084781388}
   - component: {fileID: 761846859214653389}
   - component: {fileID: 4987875958350700460}
+  - component: {fileID: 3322085150329431853}
   m_Layer: 0
   m_Name: polySurface130
   m_TagString: Untagged
@@ -541,6 +587,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3322085150329431853
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5589516894451075076}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.53279185, y: 0.5704071, z: 2.9810429}
+  m_Center: {x: 1.2649988, y: 0.17565857, z: -1.9479275}
 --- !u!1 &5807220773919343431
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,6 +891,7 @@ GameObject:
   - component: {fileID: 1269921926975909794}
   - component: {fileID: 2464389659136073990}
   - component: {fileID: 5312228111158733247}
+  - component: {fileID: 3278012379382168419}
   m_Layer: 0
   m_Name: polySurface131
   m_TagString: Untagged
@@ -904,6 +964,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3278012379382168419
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8107008129898898690}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.532792, y: 0.5704071, z: 2.9810424}
+  m_Center: {x: -1.2649986, y: 0.17565857, z: -1.9479272}
 --- !u!1 &8589851994101469414
 GameObject:
   m_ObjectHideFlags: 0

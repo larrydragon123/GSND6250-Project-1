@@ -92,6 +92,16 @@ public class PickUp : MonoBehaviour
                             currentGlasses.SetActive(false);
                             eventController.Glasses4();
                         }
+                        else if (hit.transform.gameObject.name == "DoorToApartment")
+                        {
+                            eventController.DoorToApartment();
+                            
+                        }
+                        else if (hit.transform.gameObject.name == "DoorToGlassesStore")
+                        {
+                            eventController.DoorToGlassesStore();
+                            
+                        }
                         else
                         {
                             PickUpObject(hit.transform.gameObject);
