@@ -17,6 +17,9 @@ public class PickUp : MonoBehaviour
     private int HoldLayer; //layer index
     private int PickUpLayer; //layer index
 
+    public EventController eventController;
+    private GameObject currentGlasses;
+
     //Reference to script which includes mouse movement of player (looking around)
     //we want to disable the player looking around when rotating the object
     //example below 
@@ -42,7 +45,57 @@ public class PickUp : MonoBehaviour
                     if (hit.transform.gameObject.tag == "PickUp")
                     {
                         //pass in object hit into the PickUpObject function
-                        PickUpObject(hit.transform.gameObject);
+
+                        if (hit.transform.gameObject.name == "Glasses")
+                        {
+                            eventController.FoundGlasses();
+
+                        }
+                        else if (hit.transform.gameObject.name == "Phone")
+                        {
+                            eventController.CallUber();
+                        }
+
+                        if (hit.transform.gameObject.name == "Glasses1")
+                        {
+                            eventController.ResetVision();
+                            if (currentGlasses != null)
+                            currentGlasses.SetActive(true);
+                            currentGlasses = hit.transform.gameObject;
+                            currentGlasses.SetActive(false);
+                            eventController.Glasses1();
+                        }
+                        else if (hit.transform.gameObject.name == "Glasses2")
+                        {
+                            eventController.ResetVision();
+                            if (currentGlasses != null)
+                            currentGlasses.SetActive(true);
+                            currentGlasses = hit.transform.gameObject;
+                            currentGlasses.SetActive(false);
+                            eventController.Glasses2();
+                        }
+                        else if (hit.transform.gameObject.name == "Glasses3")
+                        {
+                            eventController.ResetVision();
+                            if (currentGlasses != null)
+                            currentGlasses.SetActive(true);
+                            currentGlasses = hit.transform.gameObject;
+                            currentGlasses.SetActive(false);
+                            eventController.Glasses3();
+                        }
+                        else if (hit.transform.gameObject.name == "Glasses4")
+                        {
+                            eventController.ResetVision();
+                            if (currentGlasses != null)
+                            currentGlasses.SetActive(true);
+                            currentGlasses = hit.transform.gameObject;
+                            currentGlasses.SetActive(false);
+                            eventController.Glasses4();
+                        }
+                        else
+                        {
+                            PickUpObject(hit.transform.gameObject);
+                        }
                     }
                 }
                 // {

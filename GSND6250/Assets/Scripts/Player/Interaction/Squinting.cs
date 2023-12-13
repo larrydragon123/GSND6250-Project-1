@@ -7,11 +7,12 @@ using UnityEngine.Rendering.Universal;
 public class Squinting : MonoBehaviour
 {
     public Volume volume;
+    public bool isfixed = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        isfixed = false;
     }
 
     // Update is called once per frame
@@ -23,14 +24,21 @@ public class Squinting : MonoBehaviour
             volume.profile.TryGet(out Vignette vignette);
             vignette.intensity.value = 0.75f;
             volume.profile.TryGet(out DepthOfField DOF);
-            DOF.focusDistance.value = 1.5f;
+            if(isfixed)
+                DOF.SetAllOverridesTo(false);
+            else
+                DOF.focusDistance.value = 1.5f;
+            
         }
         else
         {
             volume.profile.TryGet(out Vignette vignette);
             vignette.intensity.value = 0f;
             volume.profile.TryGet(out DepthOfField DOF);
-            DOF.focusDistance.value = 1f;
+            if(isfixed)
+                DOF.SetAllOverridesTo(false);
+            else
+                DOF.focusDistance.value = 1f;
         }
     }
 }
