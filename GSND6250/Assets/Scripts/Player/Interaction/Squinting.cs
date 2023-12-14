@@ -9,6 +9,7 @@ public class Squinting : MonoBehaviour
     public Volume volume;
     public bool isfixed = false;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +39,7 @@ public class Squinting : MonoBehaviour
             if(isfixed)
                 DOF.SetAllOverridesTo(false);
             else
-                DOF.focusDistance.value = 1f;
+                DOF.focusDistance.value = 1;
         }
     }
 }
