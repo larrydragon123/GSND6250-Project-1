@@ -23,12 +23,37 @@ public class EventController : MonoBehaviour
 
     private bool isClosed = false;
     private bool isFading = false;
+
+    public AudioClip[] audioClips;
+    private AudioSource audioSource;
+
+    public AudioSource phoneAudioSource;
+    public AudioSource carAudioSource;
+    public AudioSource bellAudioSource;
+
+
+    private bool foundPhone = false;
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         textPanel.SetActive(true);
         isClosed = false;
         typeWriter.StartTyping("Damn, Where Did I put my glasses?");
+        //play the first audio clip
+        audioSource.clip = audioClips[0];
+        audioSource.Play();
+    }
+
+    IEnumerator PhoneRing(){
+        //if not found ring phone every 20 seconds
+        phoneAudioSource.Play();
+        yield return new WaitForSeconds(20f);
+        if(!foundPhone){
+            StartCoroutine(PhoneRing());
+        }
+
     }
 
 
@@ -45,37 +70,60 @@ public class EventController : MonoBehaviour
     public void FoundGlasses(){
         textPanel.SetActive(true);
         isClosed = false;
-        typeWriter.StartTyping("Shit, my glasses are broken, gotta get a new one");
+        typeWriter.StartTyping("Shit, my glasses are broken! I gotta get a new pair!");
+        audioSource.clip = audioClips[1];
+        audioSource.Play();
         StartCoroutine(FindPhone());
     }
 
     IEnumerator FindPhone(){
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
         textPanel.SetActive(true);
         isClosed = false;
-        typeWriter.StartTyping("Where is my phone, gotta call an uber");
+        typeWriter.StartTyping("I need to find my phone so I can Uba over");
+        StartCoroutine(PhoneRing());
+        audioSource.clip = audioClips[2];
+        audioSource.Play();
     }
 
     public void CallUber(){
         textPanel.SetActive(true);
         isClosed = false;
-        typeWriter.StartTyping("Here you are, calling the uber");
+        foundPhone = true;
+        typeWriter.StartTyping("Found the phone! Lets call that Uba and go");
+        audioSource.clip = audioClips[3];
+        audioSource.Play();
         StartCoroutine(UberArrive());
+    }
+    IEnumerator UberArrive(){
+        yield return new WaitForSeconds(5f);
+        textPanel.SetActive(true);
+        isClosed = false;
+        carAudioSource.Play();
+        typeWriter.StartTyping("Alright the Uba is here, let's get outside");
+        audioSource.clip = audioClips[4];
+        audioSource.Play();
+        yield return new WaitForSeconds(3f);
+        // load next scene
     }
 
     public void FindGlasses(){
         textPanel.SetActive(true);
         isClosed = false;
-        typeWriter.StartTyping("Okay, gotta try on glasses to find one that fits my visual acuity");
+        bellAudioSource.Play();
+        typeWriter.StartTyping("Alright, there's a few pairs in here, lets try them on until we get the right one.");
+        audioSource.clip = audioClips[5];
+        audioSource.Play();
     }
 
-    IEnumerator UberArrive(){
-        yield return new WaitForSeconds(5f);
+    IEnumerator GoHome(){
         textPanel.SetActive(true);
         isClosed = false;
-        typeWriter.StartTyping("Okay, Uber is here gotta go");
+        typeWriter.StartTyping("This one feels really good! I can see clearly! I think it's time to head back home now!");
+        audioSource.clip = audioClips[6];
+        audioSource.Play();
         yield return new WaitForSeconds(3f);
-        // load next scene
+        // load scene
     }
 
     public void Glasses1(){
@@ -125,13 +173,7 @@ public class EventController : MonoBehaviour
         StartCoroutine(GoToApartment());
     }
 
-    IEnumerator GoHome(){
-        textPanel.SetActive(true);
-        isClosed = false;
-        typeWriter.StartTyping("I think this is the right one, I can see clearly now, lets go back to home");
-        yield return new WaitForSeconds(3f);
-        // load scene
-    }
+    
 
     public void FadeIn(){
         StartCoroutine(DoFade(1));
