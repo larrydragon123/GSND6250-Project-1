@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7402475530596440780}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: transform24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1225604355137807866}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: transform23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5850086192987849390}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: polySurface47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 917497454767445643}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: transform25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 437261444546295493}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: polySurface44
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6606912450839444691}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: polySurface46
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4946190917674021798}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Toilet_paper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,9 +233,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7525576161746171234}
-  m_Layer: 0
+  - component: {fileID: 8679948507788544199}
+  - component: {fileID: 220220867202791732}
+  m_Layer: 15
   m_Name: Toilet paper
-  m_TagString: Untagged
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -249,14 +251,43 @@ Transform:
   m_GameObject: {fileID: 7150562859250315224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -113.59, y: 1.146, z: 130.71}
-  m_LocalScale: {x: 3.9344, y: 3.9344, z: 3.9344}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4946190917674021798}
   - {fileID: 2178416757532258806}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8679948507788544199
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7150562859250315224}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15662003, y: 0.1084322, z: 0.12523651}
+  m_Center: {x: -0.7258587, y: -0.09157522, z: 0.06908035}
+--- !u!54 &220220867202791732
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7150562859250315224}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7281792672999301168
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +299,7 @@ GameObject:
   - component: {fileID: 2178416757532258806}
   - component: {fileID: 62173773222520947}
   - component: {fileID: 489108139010137334}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Toilet_paper1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +380,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2938678725872021818}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: transform22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
