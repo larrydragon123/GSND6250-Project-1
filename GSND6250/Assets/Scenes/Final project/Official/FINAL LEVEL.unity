@@ -14519,7 +14519,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &798385435
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30067,6 +30067,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 130879600, guid: 0e3191593f007cf47ad997f0111eef43, type: 3}
+      propertyPath: phone
+      value: 
+      objectReference: {fileID: 919132149502767709}
     - target: {fileID: 130879600, guid: 0e3191593f007cf47ad997f0111eef43, type: 3}
       propertyPath: player
       value: 

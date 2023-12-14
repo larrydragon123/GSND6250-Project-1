@@ -31,6 +31,10 @@ public class EventController : MonoBehaviour
     public AudioSource carAudioSource;
     public AudioSource bellAudioSource;
 
+    public GameObject phone;
+
+    public int gameState = 0;
+
 
     private bool foundPhone = false;
     // Start is called before the first frame update
@@ -44,13 +48,16 @@ public class EventController : MonoBehaviour
         //play the first audio clip
         audioSource.clip = audioClips[0];
         audioSource.Play();
+        phone.SetActive(false);
     }
 
-    IEnumerator PhoneRing(){
+    IEnumerator PhoneRing()
+    {
         //if not found ring phone every 20 seconds
         phoneAudioSource.Play();
         yield return new WaitForSeconds(20f);
-        if(!foundPhone){
+        if (!foundPhone)
+        {
             StartCoroutine(PhoneRing());
         }
 
@@ -60,23 +67,30 @@ public class EventController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(typeWriter.isTyping == false && !isClosed)
+        if (typeWriter.isTyping == false && !isClosed)
         {
             StartCoroutine(DisableTextPanel());
         }
-        
+
     }
 
-    public void FoundGlasses(){
-        textPanel.SetActive(true);
-        isClosed = false;
-        typeWriter.StartTyping("Shit, my glasses are broken! I gotta get a new pair!");
-        audioSource.clip = audioClips[1];
-        audioSource.Play();
-        StartCoroutine(FindPhone());
+    public void FoundGlasses()
+    {
+        if (gameState == 0)
+        {
+            textPanel.SetActive(true);
+            isClosed = false;
+            typeWriter.StartTyping("Shit, my glasses are broken! I gotta get a new pair!");
+            audioSource.clip = audioClips[1];
+            audioSource.Play();
+            StartCoroutine(FindPhone());
+            gameState = 1;
+            phone.SetActive(true);
+        }
     }
 
-    IEnumerator FindPhone(){
+    IEnumerator FindPhone()
+    {
         yield return new WaitForSeconds(10f);
         textPanel.SetActive(true);
         isClosed = false;
@@ -86,16 +100,22 @@ public class EventController : MonoBehaviour
         audioSource.Play();
     }
 
-    public void CallUber(){
-        textPanel.SetActive(true);
-        isClosed = false;
-        foundPhone = true;
-        typeWriter.StartTyping("Found the phone! Lets call that Uba and go");
-        audioSource.clip = audioClips[3];
-        audioSource.Play();
-        StartCoroutine(UberArrive());
+    public void CallUber()
+    {
+        if (gameState == 1)
+        {
+            textPanel.SetActive(true);
+            isClosed = false;
+            foundPhone = true;
+            typeWriter.StartTyping("Found the phone! Lets call that Uba and go");
+            audioSource.clip = audioClips[3];
+            audioSource.Play();
+            StartCoroutine(UberArrive());
+            gameState = 2;
+        }
     }
-    IEnumerator UberArrive(){
+    IEnumerator UberArrive()
+    {
         yield return new WaitForSeconds(5f);
         textPanel.SetActive(true);
         isClosed = false;
@@ -107,38 +127,53 @@ public class EventController : MonoBehaviour
         // load next scene
     }
 
-    public void FindGlasses(){
-        textPanel.SetActive(true);
-        isClosed = false;
-        bellAudioSource.Play();
-        typeWriter.StartTyping("Alright, there's a few pairs in here, lets try them on until we get the right one.");
-        audioSource.clip = audioClips[5];
-        audioSource.Play();
+    public void FindGlasses()
+    {
+        if (gameState == 2)
+        {
+
+            textPanel.SetActive(true);
+            isClosed = false;
+            bellAudioSource.Play();
+            typeWriter.StartTyping("Alright, there's a few pairs in here, lets try them on until we get the right one.");
+            audioSource.clip = audioClips[5];
+            audioSource.Play();
+        }
     }
 
-    IEnumerator GoHome(){
-        textPanel.SetActive(true);
-        isClosed = false;
-        typeWriter.StartTyping("This one feels really good! I can see clearly! I think it's time to head back home now!");
-        audioSource.clip = audioClips[6];
-        audioSource.Play();
-        yield return new WaitForSeconds(3f);
-        // load scene
+    IEnumerator GoHome()
+    {
+        if (gameState == 2)
+        {
+
+            textPanel.SetActive(true);
+            isClosed = false;
+            typeWriter.StartTyping("This one feels really good! I can see clearly! I think it's time to head back home now!");
+            audioSource.clip = audioClips[6];
+            audioSource.Play();
+            yield return new WaitForSeconds(3f);
+            gameState = 3;
+            // load scene
+        }
     }
 
-    public void Glasses1(){
+    public void Glasses1()
+    {
         volume.profile.TryGet(out LensDistortion lensDistortion);
         lensDistortion.intensity.value = 0.5f;
     }
-    public void Glasses2(){
+    public void Glasses2()
+    {
         volume.profile.TryGet(out ChromaticAberration chromaticAberration);
         chromaticAberration.intensity.value = 1f;
     }
-    public void Glasses3(){
+    public void Glasses3()
+    {
         volume.profile.TryGet(out Tonemapping tonemapping);
         tonemapping.SetAllOverridesTo(true);
     }
-    public void Glasses4(){
+    public void Glasses4()
+    {
         squinting.isfixed = true;
         volume.profile.TryGet(out Bloom bloom);
         bloom.SetAllOverridesTo(false);
@@ -146,13 +181,18 @@ public class EventController : MonoBehaviour
 
     }
 
-    public void DoorToGlassesStore(){
-        Debug.Log("DoorToGlassesStore");
-        StartFade();
-        StartCoroutine(GoToGlassesStore());
+    public void DoorToGlassesStore()
+    {
+        if (gameState >= 2)
+        {
+            Debug.Log("DoorToGlassesStore");
+            StartFade();
+            StartCoroutine(GoToGlassesStore());
+        }
     }
 
-    IEnumerator GoToGlassesStore(){
+    IEnumerator GoToGlassesStore()
+    {
         yield return new WaitForSeconds(fadeDuration);
         player.GetComponent<CharacterController>().enabled = false;
         player.GetComponent<CharacterController>().transform.position = GlassesStorePosition.transform.position;
@@ -160,26 +200,34 @@ public class EventController : MonoBehaviour
         FindGlasses();
     }
 
-    IEnumerator GoToApartment(){
+    IEnumerator GoToApartment()
+    {
         yield return new WaitForSeconds(fadeDuration);
         player.GetComponent<CharacterController>().enabled = false;
         player.GetComponent<CharacterController>().transform.position = ApartmentPosition.transform.position;
         player.GetComponent<CharacterController>().enabled = true;
     }
 
-    public void DoorToApartment(){
-        Debug.Log("DoorToApartment");
-        StartFade();
-        StartCoroutine(GoToApartment());
+    public void DoorToApartment()
+    {
+        if (gameState >= 3)
+        {
+
+            Debug.Log("DoorToApartment");
+            StartFade();
+            StartCoroutine(GoToApartment());
+        }
     }
 
-    
 
-    public void FadeIn(){
+
+    public void FadeIn()
+    {
         StartCoroutine(DoFade(1));
     }
 
-    public void FadeOut(){
+    public void FadeOut()
+    {
         StartCoroutine(DoFade(0));
     }
 
@@ -221,7 +269,8 @@ public class EventController : MonoBehaviour
     }
 
 
-    public void ResetVision(){
+    public void ResetVision()
+    {
         volume.profile.TryGet(out LensDistortion lensDistortion);
         lensDistortion.intensity.value = 0f;
         volume.profile.TryGet(out ChromaticAberration chromaticAberration);
